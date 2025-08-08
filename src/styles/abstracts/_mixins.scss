@@ -1,0 +1,20 @@
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin overflow-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+@mixin transition($props: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $props $time $ease;
+}
+
+
