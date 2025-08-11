@@ -1,78 +1,82 @@
+
 @font-face {
   font-family: 'icomoon';
-    /* Modern first */
-    src:  url('fonts/icomoon.woff2?5spxmn') format('woff2'),
-    url('fonts/icomoon.ttf?5spxmn') format('truetype'),
-    url('fonts/icomoon.woff?5spxmn') format('woff');
+  src:  url('fonts/icomoon.eot?3k366s');
+  src:  url('fonts/icomoon.eot?3k366s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3k366s') format('truetype'),
+    url('fonts/icomoon.woff?3k366s') format('woff'),
+    url('fonts/icomoon.svg?3k366s#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* biome-ignore lint/a11y/useGenericFontNames: icon font intentionally has no generic fallback */
+.icon{
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon', sans-serif !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  
+  color: currentColor;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Arrow_left:before {
+.icon--arrow-circle-down9-1::before {
   content: "\e900";
 }
-.icon-Arrow_right:before {
+.icon--Arrow_left::before {
   content: "\e901";
-  color: #fff;
 }
-.icon-Bag:before {
+.icon--Arrow_right::before {
   content: "\e902";
-  color: #f85e9f;
+  color: currentColor;
 }
-.icon-Calendar:before {
+.icon--Bag::before {
   content: "\e903";
-  color: #fff;
+  color: currentColor;
 }
-.icon-Cupoun:before {
+.icon--Calendar::before {
   content: "\e904";
-  color: #fff;
+  color: currentColor;
 }
-.icon-Facebook:before {
+.icon--Cupoun::before {
   content: "\e905";
-  color: #5d50c6;
+  color: currentColor;
 }
-.icon-Hamburger:before {
+.icon--Facebook::before {
   content: "\e906";
-  color: #5d50c6;
+  color: currentColor;
 }
-.icon-Instagram:before {
+.icon--Hamburger::before {
   content: "\e907";
-  color: #fff;
+  color: currentColor;
 }
-.icon-Location:before {
+.icon--Instagram::before {
   content: "\e908";
-  color: #fff;
+  color: currentColor;
 }
-.icon-Mail:before {
+.icon--Location::before {
   content: "\e909";
+  color: currentColor;
 }
-.icon-Star:before {
+.icon--Mail::before {
   content: "\e90a";
-  color: #facd49;
 }
-.icon-Twitter:before {
+.icon--Star::before {
   content: "\e90b";
-  color: #f1f2f2;
+  color: currentColor;
 }
-.icon-Vector:before {
+.icon--Twitter::before {
   content: "\e90c";
-  color: #5d50c6;
+  color: currentColor;
+}
+.icon--Vector::before {
+  content: "\e90d";
+  color: currentColor;
 }

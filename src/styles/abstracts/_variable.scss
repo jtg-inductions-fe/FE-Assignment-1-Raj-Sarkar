@@ -1,21 +1,19 @@
-
 $color-white: #ffffff;
 $color-black: #000000;
 $success: #22c55e;
 $error: #ef4444;
 $warning: #f97316;
 $info: #3b82f6;
-$pink:#F85E9F;
-$violet:#5D50C6;
-$orange:#FF5722;
+$pink:   #f85e9f;
+$violet: #5d50c6;
+$orange: #ff5722;
+$yellow:#facd49;
 
-$radius-sm: 0.25rem;
-$radius-md: 0.5rem; 
-$radius-lg: 0.75rem;
-$radius-full: 9999px;
+$radius-sm: 0.4rem;
+$radius-md: 0.8rem; 
+$radius-lg: 1.2rem;
+$radius-full: 50%;
 
-
-
-$shadow-sm: 0 1px 2px #0000000d;
-$shadow-md: 0 4px 6px #0000001a;
-$shadow-lg: 0 10px 15px #00000026;
+$shadow-sm: 0 0.1rem 0.2rem #0000000d;
+$shadow-md: 0 0.4rem 0.6rem #0000001a;
+$shadow-lg: 0 1rem 1.5rem #00000026;
