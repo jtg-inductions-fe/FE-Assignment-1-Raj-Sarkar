@@ -13,5 +13,5 @@ dist
 .idea
 .DS_Store
 *.sw?
-src/styles/main.css
-src/styles/main.css.map
+src/styles/**/*.css
+src/styles/**/*.css.map
