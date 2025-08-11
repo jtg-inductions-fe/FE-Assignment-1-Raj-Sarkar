@@ -45,7 +45,8 @@ To set up the project on your local environment, follow these steps:
 
     The app will typically be available at http://localhost:3000, but check the terminal output for the exact URL.
 
-    > **_NOTE:_** Note: If you want to change the server's port number, you can do so by modifying the **vite.config.js** file at the root level of the project:
+    > **_NOTE:_** Note: If you want to change the server's port number, you can do so by modifying the **vite.config.js** 
+    file at the root level of the project:
 
     ```js
     server{
