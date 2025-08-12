@@ -1,0 +1,130 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+#header-section {
+    @include flex-container(row, space-between);
+    position: relative;
+    padding: 3.5rem 2rem;
+    @include responsive('sm') {
+        padding: 3.5rem 2rem;
+    }
+
+    @include responsive('md') {
+        padding: 3.2rem 6.5rem;
+    }
+    @include responsive('lg'){
+        padding: 6.5rem 15rem;
+    }
+}
+
+.logo-container {
+    width: 4rem;
+    height: 4rem;
+
+    @include responsive('xs') {
+        order: 1 ;
+    }
+
+    @include responsive('md') {
+        order: 2;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @include responsive('lg'){
+        order: 1;
+        position: static;
+    }
+}
+
+.logo {
+    width: 100%;
+    @include overflow-hidden;
+}
+
+#hamburger::before {
+    color: $violet;
+    font-size: 4.5rem;
+    @include responsive('md'){
+        display: block !important;
+    }
+    @include responsive('lg'){
+        display: none !important;
+    }
+}
+
+#navbar {
+    @include responsive('xs') {
+        order: 2;
+    }
+
+    @include responsive('md') {
+        order: 1;
+    }
+    @include responsive('lg'){
+        order: 2;
+    }
+}
+
+#nav-item-container {
+    @include flex-container(column, center, center, 1rem);
+    width: max-content;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    background-color: $white;
+    border-radius: $radius-sm;
+    
+    border: 0.05rem solid $lightgray;
+
+    li {
+        padding: 0.4rem;
+        width: 100%;
+        border-bottom: 0.05rem solid $lightgray;
+        @include responsive('lg'){
+            border:none;
+        }
+        a{
+            text-decoration: none;
+            @include typography(1.4rem, 400,$gray);
+            white-space: nowrap;
+            &:hover{
+                color:$gray-black;
+            }
+        }
+    }
+
+    @include responsive('xs'){
+        flex-direction: col !important;
+    }
+
+    @include responsive('md') {
+        left: 2rem;
+    }
+    @include responsive('lg'){
+        position:static;
+        @include flex-container(row,center,center,5rem);
+        border:none;
+    }
+}
+
+#login-signp-container {
+    order: 3;
+    @include responsive('xs') {
+        display: none;
+    }
+
+    @include responsive('md') {
+        display: block;
+    }
+
+    button {
+        @include button();
+        @include typography(1.4rem, 400);
+        border-radius: $radius-full;
+    }
+
+    #signup {
+        @include button($violet, $white,11.5rem)
+    }
+}

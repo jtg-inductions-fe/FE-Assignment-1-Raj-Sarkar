@@ -1,9 +1,12 @@
-$color-white: #ffffff;
-$color-black: #000000;
+$white: #ffffff;
+$black: #000000;
 $success: #22c55e;
 $error: #ef4444;
 $warning: #f97316;
 $info: #3b82f6;
+$gray:#808080;
+$gray-black:#191825;
+$lightgray:#d3d3d3;
 $pink:   #f85e9f;
 $violet: #5d50c6;
 $orange: #ff5722;
@@ -12,7 +15,7 @@ $yellow:#facd49;
 $radius-sm: 0.4rem;
 $radius-md: 0.8rem; 
 $radius-lg: 1.2rem;
-$radius-full: 50%;
+$radius-full: 9999px;
 
 $shadow-sm: 0 0.1rem 0.2rem #0000000d;
 $shadow-md: 0 0.4rem 0.6rem #0000001a;
