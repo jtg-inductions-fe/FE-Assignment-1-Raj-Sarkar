@@ -9,6 +9,7 @@
     @include responsive('md') {
         padding: 3.2rem 6.5rem;
     }
+
     @include responsive('lg') {
         padding: 6.5rem 15rem;
     }
@@ -25,6 +26,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
     @include responsive('lg') {
         order: 1;
         position: static;
@@ -39,13 +41,16 @@
 #hamburger::before {
     color: $violet;
     font-size: 4.5rem;
+
     @include responsive('md') {
         display: block;
     }
+
     @include responsive('lg') {
         display: none;
     }
 }
+
 #hamburger:focus {
     border: 0.2rem solid $info;
 }
@@ -58,6 +63,7 @@
     @include responsive('md') {
         order: 1;
     }
+
     @include responsive('lg') {
         order: 2;
     }
@@ -78,26 +84,26 @@
         padding: 0.4rem;
         width: 100%;
         border-bottom: 0.05rem solid $lightgray;
+
         @include responsive('lg') {
             border: none;
         }
+
         a {
             text-decoration: none;
             @include typography(1.4rem, 400, $gray);
             white-space: nowrap;
+
             &:hover {
                 color: $gray-black;
             }
         }
     }
 
-    @include responsive('xs') {
-        flex-direction: column;
-    }
-
     @include responsive('md') {
         left: 2rem;
     }
+
     @include responsive('lg') {
         position: static;
         @include flex-container(row, center, center, 5rem);
@@ -107,6 +113,7 @@
 
 #login-signup-container {
     order: 3;
+
     @include responsive('xs') {
         display: none;
     }
@@ -125,9 +132,11 @@
         @include button($violet, $white, 11.5rem);
     }
 }
+
 .hidden {
     display: none !important;
 }
+
 .flex {
     display: flex !important;
 }
