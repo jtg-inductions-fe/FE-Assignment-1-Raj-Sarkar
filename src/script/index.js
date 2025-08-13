@@ -5,6 +5,11 @@ hamburgerIcon.addEventListener('click',()=>{
     hamburgerIcon.style.display='none'
     navItemsContainer.style.display='flex'
 })
+hamburgerIcon.addEventListener('keydown',(e)=>{
+    if(e.key==='Enter' || e.key===' '){
+        hamburgerIcon.click()
+    }
+})
 
 document.addEventListener('click',(e)=>{
     if(document.body.offsetWidth>=1200)return

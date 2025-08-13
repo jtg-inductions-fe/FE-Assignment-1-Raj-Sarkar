@@ -20,3 +20,10 @@ $radius-full: 9999px;
 $shadow-sm: 0 0.1rem 0.2rem #0000000d;
 $shadow-md: 0 0.4rem 0.6rem #0000001a;
 $shadow-lg: 0 1rem 1.5rem #00000026;
+
+$breakpoints: (
+  'xs': 320px,
+  "sm": 480px,
+  "md": 768px,
+  "lg": 1200px,
+);
