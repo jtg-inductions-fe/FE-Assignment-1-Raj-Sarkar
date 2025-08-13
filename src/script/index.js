@@ -1,20 +1,25 @@
-const hamburgerIcon=document.getElementById('hamburger')
-const navItemsContainer=document.getElementById('nav-item-container')
+const hamburgerIcon = document.getElementById('hamburger');
+const navItemsContainer = document.getElementById('nav-item-container');
+const TABLET_BREAKPOINT = 1200;
 
-hamburgerIcon.addEventListener('click',()=>{
-    hamburgerIcon.style.display='none'
-    navItemsContainer.style.display='flex'
-})
-hamburgerIcon.addEventListener('keydown',(e)=>{
-    if(e.key==='Enter' || e.key===' '){
-        hamburgerIcon.click()
+hamburgerIcon.addEventListener('click', () => {
+    hamburgerIcon.classList.add('hidden');
+    navItemsContainer.classList.add('flex');
+});
+hamburgerIcon.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        hamburgerIcon.click();
     }
-})
+});
 
-document.addEventListener('click',(e)=>{
-    if(document.body.offsetWidth>=1200)return
-    if(!navItemsContainer.contains(e.target) && !hamburgerIcon.contains(e.target)){
-        navItemsContainer.style.display='none'
-        hamburgerIcon.style.display='block'
+document.addEventListener('click', (e) => {
+    if (document.body.offsetWidth >= TABLET_BREAKPOINT) return;
+    if (
+        !navItemsContainer.contains(e.target) &&
+        !hamburgerIcon.contains(e.target)
+    ) {
+        navItemsContainer.classList.remove('flex');
+        hamburgerIcon.classList.remove('hidden');
     }
-})
+});

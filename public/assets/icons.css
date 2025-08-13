@@ -26,9 +26,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon::before{
-  color:inherit;
-}
 
 .icon--arrow-circle::before {
   content: "\e900";

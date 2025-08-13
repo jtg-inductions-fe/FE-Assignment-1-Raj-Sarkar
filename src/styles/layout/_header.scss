@@ -9,7 +9,7 @@
     @include responsive('md') {
         padding: 3.2rem 6.5rem;
     }
-    @include responsive('lg'){
+    @include responsive('lg') {
         padding: 6.5rem 15rem;
     }
 }
@@ -17,10 +17,7 @@
 .logo-container {
     width: 4rem;
     height: 4rem;
-
-    @include responsive('xs') {
-        order: 1 ;
-    }
+    order: 1;
 
     @include responsive('md') {
         order: 2;
@@ -28,7 +25,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    @include responsive('lg'){
+    @include responsive('lg') {
         order: 1;
         position: static;
     }
@@ -42,12 +39,15 @@
 #hamburger::before {
     color: $violet;
     font-size: 4.5rem;
-    @include responsive('md'){
-        display: block !important;
+    @include responsive('md') {
+        display: block;
     }
-    @include responsive('lg'){
-        display: none !important;
+    @include responsive('lg') {
+        display: none;
     }
+}
+#hamburger:focus {
+    border: 0.2rem solid $info;
 }
 
 #navbar {
@@ -58,7 +58,7 @@
     @include responsive('md') {
         order: 1;
     }
-    @include responsive('lg'){
+    @include responsive('lg') {
         order: 2;
     }
 }
@@ -71,41 +71,41 @@
     right: 2rem;
     background-color: $white;
     border-radius: $radius-sm;
-    
+
     border: 0.05rem solid $lightgray;
 
     li {
         padding: 0.4rem;
         width: 100%;
         border-bottom: 0.05rem solid $lightgray;
-        @include responsive('lg'){
-            border:none;
+        @include responsive('lg') {
+            border: none;
         }
-        a{
+        a {
             text-decoration: none;
-            @include typography(1.4rem, 400,$gray);
+            @include typography(1.4rem, 400, $gray);
             white-space: nowrap;
-            &:hover{
-                color:$gray-black;
+            &:hover {
+                color: $gray-black;
             }
         }
     }
 
-    @include responsive('xs'){
-        flex-direction: col !important;
+    @include responsive('xs') {
+        flex-direction: column;
     }
 
     @include responsive('md') {
         left: 2rem;
     }
-    @include responsive('lg'){
-        position:static;
-        @include flex-container(row,center,center,5rem);
-        border:none;
+    @include responsive('lg') {
+        position: static;
+        @include flex-container(row, center, center, 5rem);
+        border: none;
     }
 }
 
-#login-signp-container {
+#login-signup-container {
     order: 3;
     @include responsive('xs') {
         display: none;
@@ -122,6 +122,12 @@
     }
 
     #signup {
-        @include button($violet, $white,11.5rem)
+        @include button($violet, $white, 11.5rem);
     }
+}
+.hidden {
+    display: none !important;
+}
+.flex {
+    display: flex !important;
 }
