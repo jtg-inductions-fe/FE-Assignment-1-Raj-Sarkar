@@ -1,0 +1,47 @@
+@mixin flex-center($direction: row,$justify:center,$align:center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin overflow-hidden($overflow) {
+  overflow: $overflow;
+  white-space: nowrap;
+}
+
+@mixin transition($props: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $props $time $ease;
+}
+
+@mixin font-style($font-size,$font-weight: normal,$font-family:circular-std,$line-height:1.5) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+$mobile-landscape: 568px;
+$tablet: 768px;
+$desktop: 992px;
+
+$breakpoints: (
+  "sm": (
+    min-width: $mobile-landscape,
+  ),
+  "medium": (
+    min-width: $tablet,
+  ),
+  "large": (
+    min-width: $desktop,
+  ),
+); 
+
+@mixin responsive($size) {
+  $query: map-get($breakpoints, $size);
+
+    @media #{$query} {
+      @content;
+  }
+}
