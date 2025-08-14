@@ -1,0 +1,29 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+#hero_section {
+    margin-top: 3.5rem;
+}
+
+#hero_img_container {
+    margin: 0rem 1.6rem;
+}
+
+#hero_img {
+    width: 100%;
+}
+
+#hero_desc_container {
+    @include flex-container(column, center, center, 1.6rem);
+}
+
+#explore {
+    @include button(transparent, $pink, 22.4rem, 5.6rem);
+    @include flex-container(row, center, center, 1rem);
+    border-radius: $radius-full;
+    box-shadow: $shadow-md;
+
+    & * {
+        @include typography(1.4rem, 400, $pink);
+    }
+}
