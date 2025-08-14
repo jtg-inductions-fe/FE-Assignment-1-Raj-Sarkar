@@ -1,10 +1,12 @@
+import { TABLET_BREAKPOINT } from './constants.js';
+
 const hamburgerIcon = document.getElementById('hamburger');
-const navItemsContainer = document.getElementById('nav-item-container');
-const TABLET_BREAKPOINT = 1200;
+const navItemsContainer =
+    document.getElementsByClassName('nav_item_container')[0];
 
 hamburgerIcon.addEventListener('click', () => {
-    hamburgerIcon.classList.add('hidden');
-    navItemsContainer.classList.add('flex');
+    hamburgerIcon.classList.add('d_hidden');
+    navItemsContainer.classList.add('active');
 });
 hamburgerIcon.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -19,7 +21,7 @@ document.addEventListener('click', (e) => {
         !navItemsContainer.contains(e.target) &&
         !hamburgerIcon.contains(e.target)
     ) {
-        navItemsContainer.classList.remove('flex');
-        hamburgerIcon.classList.remove('hidden');
+        navItemsContainer.classList.remove('active');
+        hamburgerIcon.classList.remove('d_hidden');
     }
 });
