@@ -34,8 +34,8 @@
 }
 
 .logo {
-    width: 100%;
     @include overflow-hidden;
+    width: 100%;
 }
 
 .icon--hamburger {
@@ -73,6 +73,7 @@
 
 .nav_item_container {
     @include flex-container(column, center, center, 1rem);
+    @include transition(transform, 0.3s, ease-in-out);
     position: absolute;
     top: 0;
     left: 0;
@@ -80,7 +81,6 @@
     background-color: $white;
     border-bottom: 0.05rem solid $lightgray;
     transform: translateY(-100%);
-    @include transition(transform, 0.3s, ease-in-out);
     z-index: 999;
 
     li {
@@ -93,8 +93,8 @@
         }
 
         a {
-            text-decoration: none;
             @include typography(1.4rem, 400, $gray);
+            text-decoration: none;
             white-space: nowrap;
 
             &:hover {
@@ -108,10 +108,10 @@
     }
 
     @include responsive('lg') {
+        @include flex-container(row, center, center, 5rem);
         position: static;
         transform: translateY(0);
         transition: none;
-        @include flex-container(row, center, center, 5rem);
         border: none;
     }
 }
