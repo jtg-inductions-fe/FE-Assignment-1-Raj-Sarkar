@@ -77,10 +77,13 @@ body {
     @include typography(1.4rem, 400);
     border-radius: $radius-full;
 
+    &:hover {
+        box-shadow: $shadow-lg;
+    }
+
     &--primary {
         background-color: $violet;
         color: $white;
-        box-shadow: $shadow-lg;
         white-space: nowrap;
 
         @include responsive('md') {
@@ -129,7 +132,8 @@ body {
 
 .card {
     @include flex-container(column, center, center, 3.2rem);
+    background-color: $white;
     padding: 3.2rem;
     border: 0.1rem solid $light;
-    border-radius: $radius-lg;
+    border-radius: $radius-xl;
 }

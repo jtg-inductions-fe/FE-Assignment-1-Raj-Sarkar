@@ -8,11 +8,8 @@
     }
 
     @include responsive('lg') {
-        padding: 0rem 11.5rem;
-    }
-
-    @include responsive('lg') {
         @include flex-container();
+        padding: 0rem 11.5rem;
     }
 
     &__heading-container {
@@ -21,7 +18,7 @@
         }
 
         @include responsive('lg') {
-            padding-top: 6rem;
+            padding: 6rem 0 0 2rem;
         }
     }
 
@@ -41,6 +38,7 @@
     }
 
     &__card {
+        transition: box-shadow 200ms ease;
         @include responsive('md') {
             padding: 6.4rem 6.4rem 3.5rem;
         }
@@ -61,10 +59,10 @@
                 display: none;
             }
         }
-    }
 
-    &__card:hover {
-        box-shadow: $shadow-lg;
+        &:hover {
+            box-shadow: $shadow-lg;
+        }
     }
 
     &__img {
