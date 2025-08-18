@@ -6,6 +6,7 @@ body {
 }
 
 .heading {
+    text-align: center;
     &--xl {
         @include typography(4rem, 700, $black, 120%);
 
@@ -19,15 +20,28 @@ body {
     }
 
     &--lg {
-        @include typography(3.2rem, 700);
+        @include typography(3.2rem, 400);
+        @include responsive('md') {
+            font-size: 4rem;
+        }
+
+        @include responsive('lg') {
+            font-size: 4.4rem;
+        }
     }
 
     &--md {
-        @include typography(2.4rem, 700);
+        @include typography(2.4rem, 400);
+        @include responsive('md') {
+            font-size: 2.8rem;
+        }
     }
 
     &--sm {
-        @include typography(1.6rem, 700);
+        @include typography(1.6rem, 400);
+        @include responsive('md') {
+            font-size: 2.3rem;
+        }
     }
 
     &--black {
@@ -47,6 +61,14 @@ body {
         @include responsive('md') {
             font-size: 1.8rem;
         }
+    }
+
+    &--md {
+        font-size: 1.8rem;
+    }
+
+    &--center {
+        text-align: center;
     }
 }
 
@@ -103,4 +125,11 @@ body {
             left: -20rem;
         }
     }
+}
+
+.card {
+    @include flex-container(column, center, center, 3.2rem);
+    padding: 3.2rem;
+    border: 0.1rem solid $light;
+    border-radius: $radius-lg;
 }

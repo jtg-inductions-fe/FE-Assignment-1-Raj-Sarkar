@@ -1,0 +1,74 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+.services {
+    padding: 0rem 1.6rem 6.8rem;
+    @include responsive('md') {
+        padding: 6.4rem;
+    }
+
+    @include responsive('lg') {
+        padding: 0rem 11.5rem;
+    }
+
+    @include responsive('lg') {
+        @include flex-container();
+    }
+
+    &__heading-container {
+        h3 {
+            margin-top: 1.6rem;
+        }
+
+        @include responsive('lg') {
+            padding-top: 6rem;
+        }
+    }
+
+    &__heading {
+        @include responsive('lg') {
+            text-align: start;
+        }
+    }
+
+    &__card-container {
+        @include flex-container(column, center, center, 1.6rem);
+        margin-top: 3.2rem;
+        @include responsive('md') {
+            flex-direction: row;
+            margin-top: 6.4rem;
+        }
+    }
+
+    &__card {
+        @include responsive('md') {
+            padding: 6.4rem 6.4rem 3.5rem;
+        }
+
+        @include responsive('lg') {
+            height: 44.3rem;
+            justify-content: start;
+        }
+
+        h4 {
+            @include responsive('md') {
+                margin-top: 3.2rem;
+            }
+        }
+
+        &--extra {
+            @include responsive('lg') {
+                display: none;
+            }
+        }
+    }
+
+    &__card:hover {
+        box-shadow: $shadow-lg;
+    }
+
+    &__img {
+        width: 6.4rem;
+        height: 6.4rem;
+    }
+}
