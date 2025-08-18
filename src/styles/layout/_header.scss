@@ -1,0 +1,144 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+.header_container {
+    @include flex-container(row, space-between);
+    position: relative;
+    padding: 3.5rem 2rem;
+
+    @include responsive('md') {
+        padding: 3.2rem 6.5rem;
+    }
+
+    @include responsive('lg') {
+        padding: 6.5rem 15rem;
+    }
+}
+
+.logo_container {
+    width: 4rem;
+    height: 4rem;
+    order: 1;
+
+    @include responsive('md') {
+        order: 2;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include responsive('lg') {
+        order: 1;
+        position: static;
+    }
+}
+
+.logo {
+    @include overflow-hidden;
+    width: 100%;
+}
+
+.icon--hamburger {
+    &::before {
+        color: $violet;
+        font-size: 4.5rem;
+
+        @include responsive('md') {
+            display: block;
+        }
+
+        @include responsive('lg') {
+            display: none;
+        }
+    }
+
+    &:focus {
+        border: 0.2rem solid $info;
+    }
+}
+
+.navbar {
+    @include responsive('xs') {
+        order: 2;
+    }
+
+    @include responsive('md') {
+        order: 1;
+    }
+
+    @include responsive('lg') {
+        order: 2;
+    }
+}
+
+.nav_item_container {
+    @include flex-container(column, center, center, 1rem);
+    @include transition(transform, 0.3s, ease-in-out);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    border-bottom: 0.05rem solid $lightgray;
+    transform: translateY(-100%);
+    z-index: 999;
+
+    li {
+        padding: 0.8rem;
+        width: 100%;
+        border-bottom: 0.05rem solid $lightgray;
+
+        @include responsive('lg') {
+            border: none;
+        }
+
+        a {
+            @include typography(1.4rem, 400, $gray);
+            text-decoration: none;
+            white-space: nowrap;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+
+    @include responsive('lg') {
+        @include flex-container(row, center, center, 5rem);
+        position: static;
+        transform: translateY(0);
+        transition: none;
+        border: none;
+    }
+}
+
+.login_signup_container {
+    order: 3;
+    display: none;
+
+    @include responsive('md') {
+        display: block;
+    }
+
+    button {
+        @include button();
+        @include typography(1.4rem, 400);
+        border-radius: $radius-full;
+    }
+
+    .signup {
+        @include button($violet, $white, 11.5rem);
+    }
+}
+
+.d_hidden {
+    display: none;
+}
+
+.d_flex {
+    display: flex;
+}

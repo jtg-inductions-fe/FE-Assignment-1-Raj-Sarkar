@@ -1,3 +1,25 @@
-body{
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+body {
     font-family: circular-std;
+}
+
+.black_h_lg {
+    @include typography(4rem, 700);
+}
+
+.black_h_md {
+    @include typography(3.2rem, 700);
+}
+
+.pink_h_sm {
+    @include typography(1.6rem, 700, $pink);
+}
+
+.gray_desc {
+    color: $lightgray;
+    font-size: 16px;
+    font-weight: 400;
+    @include typography(1.6rem, 400, $lightgray);
 }
