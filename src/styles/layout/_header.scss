@@ -11,7 +11,7 @@
     }
 
     @include responsive('lg') {
-        padding: 6.5rem 15rem;
+        padding: 6.5rem 15rem 5.5rem;
     }
 }
 
@@ -113,6 +113,7 @@
         transform: translateY(0);
         transition: none;
         border: none;
+        background-color: transparent;
     }
 }
 

@@ -6,7 +6,25 @@ body {
 }
 
 .black_h_lg {
-    @include typography(4rem, 700);
+    @include typography(4rem, 700, $black, 120%);
+    @include responsive('md') {
+        font-size: 5.6rem;
+    }
+
+    @include responsive('lg') {
+        font-size: 6.9rem;
+    }
+}
+
+.pink_h_lg {
+    @include typography(4rem, 600, $pink, 120%);
+    @include responsive('md') {
+        font-size: 5.6rem;
+    }
+
+    @include responsive('lg') {
+        font-size: 6.9rem;
+    }
 }
 
 .black_h_md {
@@ -18,8 +36,15 @@ body {
 }
 
 .gray_desc {
-    color: $lightgray;
-    font-size: 16px;
-    font-weight: 400;
-    @include typography(1.6rem, 400, $lightgray);
+    @include typography(1.6rem, 500, $lightgray, 160%, Inter);
+    @include responsive('md') {
+        font-size: 1.8rem;
+    }
+}
+
+.flex_row_center {
+    @include flex-container();
+}
+.flex_col_center {
+    @include flex-container(column);
 }
