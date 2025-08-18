@@ -16,7 +16,7 @@
     }
 
     &__div-container {
-        @include flex-container(row, space-evenly, center, 2.7rem, wrap);
+        @include flex-container(row, center, center, 2.7rem, wrap);
 
         @include responsive('lg') {
             gap: 10rem;

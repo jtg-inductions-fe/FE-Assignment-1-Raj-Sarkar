@@ -61,7 +61,7 @@
             @include button(transparent, $pink, 22.4rem, 5.6rem);
             @include flex-container(row, center, center, 2rem);
             margin-top: 2.5rem;
-            & * {
+            span {
                 @include typography(1.4rem, 400, $pink);
             }
 
