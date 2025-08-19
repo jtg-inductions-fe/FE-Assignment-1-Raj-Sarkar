@@ -9,14 +9,10 @@
 
     @include responsive('lg') {
         @include flex-container();
-        padding: 0rem 11.5rem;
+        padding: 0rem 11.5rem 6.1rem;
     }
 
     &__heading-container {
-        h3 {
-            margin-top: 1.6rem;
-        }
-
         @include responsive('lg') {
             padding: 6rem 0 0 2rem;
         }
@@ -38,7 +34,7 @@
     }
 
     &__card {
-        transition: box-shadow 200ms ease;
+        @include transition(box-shadow, 200ms, ease);
         @include responsive('md') {
             padding: 6.4rem 6.4rem 3.5rem;
         }
