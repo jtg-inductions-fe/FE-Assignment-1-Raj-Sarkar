@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -43,32 +42,41 @@
         </section>
 
         <!-- Hero Section -->
-        <section class="hero_section">
-            <div class="hero_img_container">
+        <section class="hero">
+            <div class="hero__img-container">
                 <img
-                    class="hero_img"
+                    class="hero__img"
                     src="../public/assets/img/hero.png"
                     alt="Hero-img"
                 />
             </div>
-            <div class="hero_desc_container">
-                <button class="explore_btn" aria-label="Explore the world">
+            <div class="hero__desc-container">
+                <button class="hero__button hero__button--explore" aria-label="Explore the world">
                     <span>Explore the world!</span>
                     <i class="icon icon--bag" aria-hidden="true"></i>
                 </button>
-                <div class="hero_desc">
-                    <h1 class="black_h_lg">
-                        Travel <span class="pink_h_lg">top destination</span> of
-                        the world
+                <div class="hero__desc">
+                    <h1
+                        class="heading heading--lg hero__heading hero__heading--h1"
+                    >
+                        Travel
+                        <span class="heading heading--pink"
+                            >top destination</span
+                        >
+                        of the world
                     </h1>
-                    <p class="gray_desc">
+                    <p class="text text--gray hero__heading hero__heading--h1">
                         We always make our customer happy by providing
-                        <span>as many choices as possible</span>
+                        <span class="text text--blocklg"
+                            >as many choices as possible</span
+                        >
                     </p>
                 </div>
-                <div class="hero_button_container">
-                    <button class="get_started">Get Started</button>
-                    <button class="watch_demo">
+                <div class="hero__button-container">
+                    <button class="btn btn--primary">Get Started</button>
+                    <button
+                        class="hero__button hero__button--watch btn btn--secondary"
+                    >
                         <i class="icon icon--play" aria-hidden="true"></i>
                         <span>Watch Demo</span>
                     </button>
@@ -76,15 +84,58 @@
             </div>
             <div>
                 <img
-                    class="hero_arrow_img"
+                    class="hero__arrow-img"
                     src="../public/assets/img/arrow.png"
                     alt="arrow"
                     aria-hidden="true"
                 />
             </div>
         </section>
-        <div class="orange_ellipse"></div>
+        <div class="ellipse ellipse--primary ellipse--orange"></div>
 
+        <!-- Partner Section -->
+        <section class="partner">
+            <div class="partner__div-container">
+                <div>
+                    <img
+                        class="partner__img"
+                        src="../public/assets/img/partner1.png"
+                        alt="partner1"
+                    />
+                </div>
+                <div>
+                    <img
+                        class="partner__img"
+                        src="../public/assets/img/partner2.png"
+                        alt="partner2"
+                    />
+                </div>
+                <div>
+                    <img
+                        class="partner__img"
+                        src="../public/assets/img/partner3.png"
+                        alt="partner3"
+                    />
+                </div>
+            </div>
+            <div class="partner__div-container">
+                <div>
+                    <img
+                        class="partner__img"
+                        src="../public/assets/img/partner4.png"
+                        alt="partner4"
+                    />
+                </div>
+                <div>
+                    <img
+                        class="partner__img"
+                        src="../public/assets/img/partner5.png"
+                        alt="partner5"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- <div class="yellow_ellipse"></div> -->
         <script type="module" src="./script/index.js"></script>
     </body>
 </html>

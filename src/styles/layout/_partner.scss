@@ -1,0 +1,33 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+.partner {
+    @include flex-container(column, center, center, 3.2rem);
+    margin: 0.3rem 0 6.4rem;
+
+    @include responsive('md') {
+        margin-top: 9.6rem;
+    }
+
+    @include responsive('lg') {
+        margin-top: 5.5rem;
+        flex-direction: row;
+        gap: 10rem;
+    }
+
+    &__div-container {
+        @include flex-container(row, center, center, 2.7rem, wrap);
+
+        @include responsive('lg') {
+            gap: 10rem;
+        }
+    }
+
+    &__img {
+        height: 2rem;
+
+        @include responsive('md') {
+            height: 3.2rem;
+        }
+    }
+}
