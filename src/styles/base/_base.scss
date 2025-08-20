@@ -36,7 +36,7 @@ body {
 }
 
 .gray_desc {
-    @include typography(1.6rem, 500, $lightgray, 160%, Inter);
+    @include typography(1.6rem, 500, $gray100, 160%, Inter);
     @include responsive('md') {
         font-size: 1.8rem;
     }

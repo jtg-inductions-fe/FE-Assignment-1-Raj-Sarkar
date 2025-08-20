@@ -79,21 +79,21 @@
     left: 0;
     width: 100%;
     background-color: $white;
-    border-bottom: 0.05rem solid $lightgray;
+    border-bottom: 0.05rem solid $gray100;
     transform: translateY(-100%);
     z-index: 999;
 
     li {
         padding: 0.8rem;
         width: 100%;
-        border-bottom: 0.05rem solid $lightgray;
+        border-bottom: 0.05rem solid $gray100;
 
         @include responsive('lg') {
             border: none;
         }
 
         a {
-            @include typography(1.4rem, 400, $gray);
+            @include typography(1.4rem, 400, $gray200);
             text-decoration: none;
             white-space: nowrap;
 
