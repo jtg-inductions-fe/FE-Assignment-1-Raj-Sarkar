@@ -46,16 +46,6 @@
             padding: 6.2rem;
         }
 
-        h4 {
-            @include responsive('md') {
-                margin-top: 3.2rem;
-            }
-
-            @include responsive('lg') {
-                margin-top: 3rem;
-            }
-        }
-
         &--extra {
             @include responsive('lg') {
                 display: none;
@@ -64,6 +54,15 @@
 
         &:hover {
             box-shadow: $shadow-lg;
+        }
+    }
+
+    &__card-heading {
+        @include responsive('md') {
+            margin-top: 3.2rem;
+        }
+        @include responsive('lg') {
+            margin-top: 3rem;
         }
     }
 

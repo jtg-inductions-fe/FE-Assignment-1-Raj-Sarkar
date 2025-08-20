@@ -76,7 +76,7 @@
         max-height: 15.1rem;
     }
 
-    &__cardheading {
+    &__card-heading {
         @include typography(3.5rem, 400, $orange, 120%);
     }
 }

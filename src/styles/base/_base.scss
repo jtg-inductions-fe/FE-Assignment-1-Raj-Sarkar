@@ -12,7 +12,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     &--xl {
-        @include typography(4rem, 700, $black, 120%);
+        @include typography(4rem, 700, $black);
 
         @include responsive('md') {
             font-size: 5.6rem;
