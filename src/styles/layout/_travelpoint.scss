@@ -53,8 +53,8 @@
 
         &--abs {
             position: absolute;
-            top: 35%;
-            right: -10rem;
+            top: 34%;
+            right: -11.5rem;
             display: none;
             @include responsive('lg') {
                 display: block;
