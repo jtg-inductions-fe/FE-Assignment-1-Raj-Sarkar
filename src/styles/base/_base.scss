@@ -7,7 +7,7 @@ body {
 
 .heading {
     &--lg {
-        @include typography(4rem, 700, $black, 120%);
+        @include typography(4rem, 700, $black);
 
         @include responsive('md') {
             font-size: 5.6rem;
@@ -49,7 +49,6 @@ body {
 .btn {
     @include button($white, $black, 39.8rem, 6.5rem);
     @include typography(1.4rem, 400);
-    border-radius: $radius-full;
 
     &--primary {
         background-color: $violet;
@@ -82,8 +81,7 @@ body {
     position: absolute;
     z-index: -1;
 
-    &--orange {
-        background: radial-gradient($orange50, $white);
+    &--primary {
         filter: blur(2rem);
         top: -10rem;
         left: -20rem;
@@ -98,5 +96,9 @@ body {
             top: -10rem;
             left: -20rem;
         }
+    }
+
+    &--orange {
+        background: radial-gradient($orange50, $white);
     }
 }
