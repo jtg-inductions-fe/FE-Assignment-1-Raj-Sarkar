@@ -44,21 +44,26 @@ body {
 
     &--sm {
         @include typography(1.6rem, 400);
+        letter-spacing: 0.3rem;
         @include responsive('md') {
             font-size: 2.3rem;
+            letter-spacing: 0.4rem;
+        }
+
+        @include responsive('lg') {
+            letter-spacing: 0.5rem;
         }
     }
 
     &--pink {
         color: $pink;
         font-weight: 600;
-        letter-spacing: 0.2rem;
     }
 }
 
 .text {
-    &--gray {
-        @include typography(1.6rem, 500, $gray100, 160%, Inter);
+    &--sm {
+        @include typography(1.6rem, 500, $black, 160%, Inter);
 
         @include responsive('md') {
             font-size: 1.8rem;
@@ -69,12 +74,22 @@ body {
         @include typography(1.8rem, 400, $black, 160%, Inter);
     }
 
+    &--gray {
+        color: $gray100;
+    }
+
     &--center {
         text-align: center;
     }
 
     &--mt {
         margin-top: 3.2rem;
+    }
+
+    &--blocklg {
+        @include responsive('lg') {
+            display: block;
+        }
     }
 }
 

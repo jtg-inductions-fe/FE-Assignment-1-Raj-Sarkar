@@ -10,7 +10,7 @@
     }
 
     @include responsive('lg') {
-        margin-top: 5.5rem;
+        margin: 5.5rem 0 6.2rem 2rem;
         flex-direction: row;
         gap: 10rem;
     }

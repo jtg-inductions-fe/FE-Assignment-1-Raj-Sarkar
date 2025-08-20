@@ -1,0 +1,120 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+.keyfeature {
+    @include flex-container(column, center, center, 10.9rem);
+    @include responsive('md') {
+        padding: 0 6.4rem;
+        gap: 7rem;
+    }
+
+    @include responsive('lg') {
+        @include flex-container(row-reverse, center, start, 7rem);
+        padding: 5.8rem 0 0 14.2rem;
+    }
+    &__img-container {
+        margin: 9.2rem 4.4rem 0 3.6rem;
+        @include responsive('md') {
+            margin: 6.4rem 11.5rem 0rem 9.5rem;
+        }
+
+        @include responsive('lg') {
+            margin: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        max-height: 43.8rem;
+        @include responsive('md') {
+            max-height: none;
+        }
+
+        @include responsive('lg') {
+            object-fit: cover;
+        }
+    }
+
+    &__desc {
+        padding: 0 4.8rem 0;
+        @include responsive('md') {
+            padding: 0 3.2rem 0;
+        }
+
+        @include responsive('lg') {
+            padding: 0;
+            max-width: 55.8rem;
+        }
+    }
+
+    &__heading-container {
+        h2,
+        h3,
+        p {
+            @include responsive('lg') {
+                text-align: start;
+            }
+        }
+    }
+
+    &__icon-container {
+        @include flex-container(row, center, center);
+        width: 10rem;
+        height: 10rem;
+        border-radius: 3.2rem;
+        &--orange {
+            background-color: $orange;
+        }
+
+        &--yellow {
+            background-color: $yellow;
+        }
+
+        &--pink {
+            background-color: $pink;
+        }
+
+        .icon {
+            font-size: 4rem;
+            color: $white;
+        }
+    }
+
+    &__card-container {
+        @include flex-container(column, center, center, 0.8rem);
+        margin-top: 3.2rem;
+        @include responsive('md') {
+            margin-top: 6.4rem;
+            gap: 0;
+        }
+    }
+
+    &__card {
+        justify-self: start;
+        align-items: start;
+        border-color: $white;
+        gap: 0;
+        @include responsive('md') {
+            @include flex-container(row, start, center, 3.2rem);
+            width: 100%;
+            padding: 3.1rem 3.2rem;
+        }
+
+        &:hover {
+            border-color: $light;
+        }
+
+        h4 {
+            font-size: 2.3rem;
+            margin: 3.2rem 0 0.8rem;
+            @include responsive('md') {
+                margin: 0 0 0.8rem;
+            }
+        }
+
+        h4,
+        p {
+            text-align: start;
+        }
+    }
+}

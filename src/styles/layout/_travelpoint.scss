@@ -5,7 +5,7 @@
     padding: 0rem 1.6rem;
     @include flex-container(column, center, center, 3.7rem);
     @include responsive('md') {
-        padding: 0 6.4rem 6.4rem;
+        padding: 0 6.4rem 0;
         gap: 6.4rem;
     }
 
@@ -44,7 +44,7 @@
 
         @include responsive('lg') {
             padding: 0;
-            margin: 0;
+            margin: 0 0 1.5rem;
         }
     }
 
@@ -75,6 +75,7 @@
 
     &__card {
         gap: 1.6rem;
+        max-height: 15.1rem;
         h4 {
             @include typography(3.5rem, 400, $orange, 120%);
         }
