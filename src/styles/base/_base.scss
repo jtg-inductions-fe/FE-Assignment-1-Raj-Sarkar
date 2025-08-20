@@ -153,9 +153,8 @@ body {
         }
     }
 
-    &--yellow {
+    &--secondary {
         display: none;
-        background: radial-gradient($yellow, $white);
         filter: blur(20rem);
         right: 0;
         bottom: 0;
@@ -173,6 +172,10 @@ body {
 
     &--orange {
         background: radial-gradient(rgba($orange, 0.5), $white);
+    }
+
+    &--yellow {
+        background: radial-gradient($yellow, $white);
     }
 }
 
