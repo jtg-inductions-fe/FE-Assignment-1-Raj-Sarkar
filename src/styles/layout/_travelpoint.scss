@@ -26,13 +26,11 @@
             padding: 1rem 0 0 0;
             max-width: 45rem;
         }
+    }
 
-        h2,
-        h3,
-        p {
-            @include responsive('lg') {
-                text-align: start;
-            }
+    &__heading {
+        @include responsive('lg') {
+            text-align: start;
         }
     }
 
@@ -76,8 +74,9 @@
     &__card {
         gap: 1.6rem;
         max-height: 15.1rem;
-        h4 {
-            @include typography(3.5rem, 400, $orange, 120%);
-        }
+    }
+
+    &__cardheading {
+        @include typography(3.5rem, 400, $orange, 120%);
     }
 }

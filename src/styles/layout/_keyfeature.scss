@@ -47,13 +47,9 @@
         }
     }
 
-    &__heading-container {
-        h2,
-        h3,
-        p {
-            @include responsive('lg') {
-                text-align: start;
-            }
+    &__heading {
+        @include responsive('lg') {
+            text-align: start;
         }
     }
 
@@ -103,18 +99,16 @@
         &:hover {
             border-color: $light;
         }
+    }
 
-        h4 {
+    &__cardtext {
+        text-align: start;
+        &--h4 {
             font-size: 2.3rem;
             margin: 3.2rem 0 0.8rem;
             @include responsive('md') {
                 margin: 0 0 0.8rem;
             }
-        }
-
-        h4,
-        p {
-            text-align: start;
         }
     }
 }
