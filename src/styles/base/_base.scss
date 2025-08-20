@@ -6,6 +6,7 @@ body {
 }
 
 .heading {
+    color: $black;
     &--lg {
         @include typography(4rem, 700, $black);
 
@@ -24,10 +25,6 @@ body {
 
     &--sm {
         @include typography(1.6rem, 700);
-    }
-
-    &--black {
-        color: $black;
     }
 
     &--pink {
