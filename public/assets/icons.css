@@ -66,6 +66,6 @@
 .icon--twitter::before {
   content: "\e90c";
 }
-.icon--vector::before {
+.icon--play::before {
   content: "\e90d";
 }
