@@ -6,9 +6,9 @@ body {
 }
 
 .heading {
-    color: $black;
-    &--lg {
-        @include typography(4rem, 700, $black);
+    text-align: center;
+    &--xl {
+        @include typography(4rem, 700, $black, 120%);
 
         @include responsive('md') {
             font-size: 5.6rem;
@@ -19,12 +19,29 @@ body {
         }
     }
 
+    &--lg {
+        @include typography(3.2rem, 400);
+        @include responsive('md') {
+            font-size: 4rem;
+        }
+
+        @include responsive('lg') {
+            font-size: 4.4rem;
+        }
+    }
+
     &--md {
-        @include typography(3.2rem, 700);
+        @include typography(2.4rem, 400);
+        @include responsive('md') {
+            font-size: 2.8rem;
+        }
     }
 
     &--sm {
-        @include typography(1.6rem, 700);
+        @include typography(1.6rem, 400);
+        @include responsive('md') {
+            font-size: 2.3rem;
+        }
     }
 
     &--pink {
@@ -41,16 +58,27 @@ body {
             font-size: 1.8rem;
         }
     }
+
+    &--md {
+        font-size: 1.8rem;
+    }
+
+    &--center {
+        text-align: center;
+    }
 }
 
 .btn {
     @include button($white, $black, 39.8rem, 6.5rem);
     @include typography(1.4rem, 400);
 
+    &:hover {
+        box-shadow: $shadow-lg;
+    }
+
     &--primary {
         background-color: $violet;
         color: $white;
-        box-shadow: $shadow-lg;
         white-space: nowrap;
 
         @include responsive('md') {
@@ -98,4 +126,12 @@ body {
     &--orange {
         background: radial-gradient($orange50, $white);
     }
+}
+
+.card {
+    @include flex-container(column, center, center, 3.2rem);
+    background-color: $white;
+    padding: 3.2rem;
+    border: 0.1rem solid $light;
+    border-radius: $radius-xl;
 }
