@@ -169,9 +169,10 @@ body {
             height: 70rem;
             transform: translate(70%, 40%);
         }
-      
+    }
+
     &--orange {
-        background: radial-gradient($orange50, $white);
+        background: radial-gradient(rgba($orange, 0.5), $white);
     }
 }
 
