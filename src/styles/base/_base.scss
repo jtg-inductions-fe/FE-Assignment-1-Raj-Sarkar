@@ -49,10 +49,6 @@ body {
         }
     }
 
-    &--black {
-        color: $black;
-    }
-
     &--pink {
         color: $pink;
         font-weight: 600;
@@ -62,7 +58,7 @@ body {
 
 .text {
     &--gray {
-        @include typography(1.6rem, 500, $lightgray, 160%, Inter);
+        @include typography(1.6rem, 500, $gray100, 160%, Inter);
 
         @include responsive('md') {
             font-size: 1.8rem;
@@ -85,7 +81,6 @@ body {
 .btn {
     @include button($white, $black, 39.8rem, 6.5rem);
     @include typography(1.4rem, 400);
-    border-radius: $radius-full;
 
     &:hover {
         box-shadow: $shadow-lg;
@@ -126,8 +121,7 @@ body {
     z-index: -1;
     border-radius: $radius-full;
 
-    &--orange {
-        background: radial-gradient($orange50, $white);
+    &--primary {
         filter: blur(2rem);
         top: -10rem;
         left: -20rem;
@@ -160,6 +154,9 @@ body {
             height: 70rem;
             transform: translate(70%, 40%);
         }
+      
+    &--orange {
+        background: radial-gradient($orange50, $white);
     }
 }
 
