@@ -1,4 +1,5 @@
 import { TABLET_BREAKPOINT } from './constants.js';
+import Glide from '@glidejs/glide';
 
 const hamburgerIcon = document.getElementById('hamburger');
 const navItemsContainer =
@@ -25,3 +26,5 @@ document.addEventListener('click', (e) => {
         hamburgerIcon.classList.remove('d_hidden');
     }
 });
+
+new Glide('.glide').mount();
