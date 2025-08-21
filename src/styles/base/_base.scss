@@ -25,7 +25,6 @@ body {
 
     &--lg {
         @include typography(3.2rem, 400);
-        margin-top: 1.6rem;
         @include responsive('md') {
             font-size: 4rem;
         }

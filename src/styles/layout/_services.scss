@@ -22,6 +22,10 @@
         @include responsive('lg') {
             text-align: start;
         }
+
+        &--h3 {
+            margin-top: 1.6rem;
+        }
     }
 
     &__card-container {
