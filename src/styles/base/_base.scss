@@ -1,12 +1,16 @@
 @use '../abstracts/variable' as *;
 @use '../abstracts/mixins' as *;
 
+html,
 body {
     font-family: circular-std;
+    overflow-x: hidden;
 }
 
 .heading {
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
     &--xl {
         @include typography(4rem, 700, $black, 120%);
 
@@ -21,6 +25,7 @@ body {
 
     &--lg {
         @include typography(3.2rem, 400);
+        margin-top: 1.6rem;
         @include responsive('md') {
             font-size: 4rem;
         }
@@ -47,6 +52,7 @@ body {
     &--pink {
         color: $pink;
         font-weight: 600;
+        letter-spacing: 0.2rem;
     }
 }
 
@@ -60,11 +66,15 @@ body {
     }
 
     &--md {
-        font-size: 1.8rem;
+        @include typography(1.8rem, 400, $black, 160%, Inter);
     }
 
     &--center {
         text-align: center;
+    }
+
+    &--mt {
+        margin-top: 3.2rem;
     }
 }
 
@@ -98,6 +108,10 @@ body {
     }
 }
 
+.wrapper {
+    position: relative;
+}
+
 .ellipse {
     width: 60rem;
     height: 50rem;
@@ -105,6 +119,7 @@ body {
     pointer-events: none;
     position: absolute;
     z-index: -1;
+    border-radius: $radius-full;
 
     &--primary {
         filter: blur(2rem);
@@ -123,6 +138,23 @@ body {
         }
     }
 
+    &--yellow {
+        display: none;
+        background: radial-gradient($yellow, $white);
+        filter: blur(20rem);
+        right: 0;
+        bottom: 0;
+        transform: translate(80%, 20%);
+        @include responsive('md') {
+            display: block;
+        }
+
+        @include responsive('lg') {
+            width: 80rem;
+            height: 70rem;
+            transform: translate(70%, 40%);
+        }
+      
     &--orange {
         background: radial-gradient($orange50, $white);
     }
