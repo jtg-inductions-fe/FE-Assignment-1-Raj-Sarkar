@@ -7,7 +7,7 @@
     position: relative;
     @include responsive('lg') {
         @include flex-container(row, center, start, 0rem);
-        padding: 0rem 0.8rem 4.8rem 2.2rem;
+        padding: 0 0.8rem 4.8rem 2.2rem;
     }
 
     &__img-container {
@@ -114,6 +114,12 @@
                 padding: 0;
                 margin-top: 4.1rem;
                 text-align: start;
+            }
+        }
+
+        &--span {
+            @include responsive('lg') {
+                display: block;
             }
         }
     }

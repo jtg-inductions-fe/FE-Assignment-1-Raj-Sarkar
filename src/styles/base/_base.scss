@@ -84,12 +84,6 @@ body {
     &--mt {
         margin-top: 3.2rem;
     }
-
-    &--blocklg {
-        @include responsive('lg') {
-            display: block;
-        }
-    }
 }
 
 .btn {
