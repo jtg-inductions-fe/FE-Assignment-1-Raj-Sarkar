@@ -4,7 +4,7 @@
 .key-feature {
     @include flex-container(column, center, center, 10.9rem);
     @include responsive('md') {
-        padding: 0 6.4rem;
+        padding: 0 6.4rem 6.4rem;
         gap: 7rem;
     }
 

@@ -88,6 +88,7 @@
 
         &--h1 {
             padding: 0rem 2rem;
+            @include line-clamp;
 
             @include responsive('md') {
                 margin-top: 0.9rem;
