@@ -23,7 +23,6 @@ body {
 
     &--lg {
         @include typography(3.2rem, 400);
-        @include line-clamp;
         @include responsive('md') {
             font-size: 4rem;
         }
@@ -35,7 +34,6 @@ body {
 
     &--md {
         @include typography(2.4rem, 400);
-        @include line-clamp;
         @include responsive('md') {
             font-size: 2.8rem;
         }
@@ -43,7 +41,6 @@ body {
 
     &--sm {
         @include typography(1.6rem, 400);
-        @include line-clamp;
         letter-spacing: 0.3rem;
         @include responsive('md') {
             font-size: 2.3rem;
@@ -62,7 +59,6 @@ body {
 }
 
 .text {
-    @include line-clamp;
     &--sm {
         @include typography(1.6rem, 500, $black, 160%, Inter);
 
@@ -182,4 +178,12 @@ body {
     padding: 3.2rem;
     border: 0.1rem solid $light;
     border-radius: $radius-xl;
+}
+
+.line-clamp {
+    @include line-clamp;
+
+    &--4 {
+        -webkit-line-clamp: 4;
+    }
 }
