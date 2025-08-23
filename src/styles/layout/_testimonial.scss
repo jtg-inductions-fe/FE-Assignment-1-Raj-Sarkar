@@ -5,6 +5,7 @@
 .testimonial {
     margin-top: 6.8rem;
     padding: 0 1.6rem;
+    position: relative;
 
     @include responsive('md') {
         margin: 0;
@@ -51,7 +52,7 @@
 
             .text {
                 margin-top: 0.3rem;
-                font-family: Circular-std;
+                font-family: circular-std;
                 @include responsive('md') {
                     font-size: 2.3rem;
                     padding: 0 5rem;
@@ -59,7 +60,7 @@
 
                 @include responsive('lg') {
                     padding: 0 2rem;
-                    margin-top: 0rem;
+                    margin-top: 0.2rem;
                 }
             }
         }
