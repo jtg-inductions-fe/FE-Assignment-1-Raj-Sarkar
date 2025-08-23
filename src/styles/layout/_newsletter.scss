@@ -48,10 +48,10 @@
         @include flex-container(row, start, center, 1.6rem);
         padding: 2.4rem 3.2rem;
         color: rgba($black, 0.75);
+        background-color: $white;
+        border-radius: $radius-xl;
         @include responsive('md') {
-            background-color: $white;
             flex-grow: 1;
-            border-radius: $radius-xl;
         }
 
         .icon {
