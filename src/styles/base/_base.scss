@@ -9,8 +9,6 @@ body {
 
 .heading {
     text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
     &--xl {
         @include typography(4rem, 700, $black);
 
@@ -46,7 +44,7 @@ body {
         letter-spacing: 0.3rem;
         @include responsive('md') {
             font-size: 2.3rem;
-            letter-spacing: 0.4rem;
+            letter-spacing: 0.5rem;
         }
 
         @include responsive('lg') {
@@ -131,17 +129,19 @@ body {
 
     &--primary {
         filter: blur(2rem);
-        top: -10rem;
-        left: -20rem;
+        top: -120rem;
+        left: -25rem;
 
         @include responsive('md') {
             width: 70rem;
             height: 60rem;
+            top: -155rem;
+            left: -20rem;
         }
 
         @include responsive('lg') {
             width: 80rem;
-            top: -10rem;
+            top: -110rem;
             left: -20rem;
         }
     }
@@ -178,4 +178,8 @@ body {
     padding: 3.2rem;
     border: 0.1rem solid $light;
     border-radius: $radius-xl;
+}
+
+.line-clamp {
+    @include line-clamp;
 }
