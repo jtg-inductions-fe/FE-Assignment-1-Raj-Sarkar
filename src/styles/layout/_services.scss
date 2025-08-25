@@ -59,6 +59,10 @@
         &:hover {
             box-shadow: $shadow-lg;
         }
+
+        .text {
+            -webkit-line-clamp: 4;
+        }
     }
 
     &__card-heading {

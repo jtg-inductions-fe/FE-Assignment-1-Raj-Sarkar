@@ -182,8 +182,4 @@ body {
 
 .line-clamp {
     @include line-clamp;
-
-    &--4 {
-        -webkit-line-clamp: 4;
-    }
 }

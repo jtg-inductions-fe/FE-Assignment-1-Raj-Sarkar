@@ -46,6 +46,12 @@
         }
     }
 
+    &__heading-container {
+        .text--sm {
+            -webkit-line-clamp: 4;
+        }
+    }
+
     &__heading {
         @include responsive('lg') {
             text-align: start;
