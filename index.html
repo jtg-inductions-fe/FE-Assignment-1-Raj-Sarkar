@@ -26,21 +26,25 @@
                     aria-label="Toggle navigation menu"
                 ></button>
                 <ul class="nav_item_container">
-                    <button class="cross">x</button>
-                    <li><a href="#" class="nav__item">Home</a></li>
-                    <li><a href="#" class="nav__item">Discover</a></li>
-                    <li><a href="#" class="nav__item">Special Deals</a></li>
-                    <li><a href="#" class="nav__item">Contact</a></li>
+                    <button id="cross-btn" class="cross nav__item">x</button>
+                    <li><a href="#hero" class="nav__item">Home</a></li>
+                    <li><a href="#services" class="nav__item">Discover</a></li>
+                    <li>
+                        <a href="#key-feature" class="nav__item"
+                            >Special Deals</a
+                        >
+                    </li>
+                    <li><a href="#footer" class="nav__item">Contact</a></li>
                 </ul>
             </nav>
             <div class="login_signup_container">
-                <button>Log In</button>
-                <button class="signup">Sign Up</button>
+                <button class="nav__btn">Log In</button>
+                <button class="signup nav__btn">Sign Up</button>
             </div>
         </section>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="hero__img-container">
                 <img
                     class="hero__img"
@@ -81,7 +85,13 @@
                         class="hero__button hero__button--watch btn btn--secondary"
                     >
                         <i class="icon icon--play" aria-hidden="true"></i>
-                        <span>Watch Demo</span>
+                        <a
+                            class="link"
+                            href="https://www.youtube.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Watch Demo</a
+                        >
                     </button>
                 </div>
             </div>
@@ -145,7 +155,7 @@
         </div>
 
         <!-- Services Section -->
-        <section class="services">
+        <section id="services" class="services">
             <div class="services__heading-container">
                 <h2
                     class="heading heading--sm heading--pink services__heading line-clamp"
@@ -263,7 +273,7 @@
         </section>
 
         <!-- Key Features Section -->
-        <section class="key-feature">
+        <section id="key-feature" class="key-feature">
             <div class="key-feature__img-container">
                 <img
                     class="key-feature__img"
@@ -368,104 +378,13 @@
             </h3>
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide">
-                            <img
-                                class="testimonial__img"
-                                src="/assets/img/carousel.png"
-                                alt="carousel slide image"
-                            />
-                            <div class="glide__slide-desc">
-                                <h4 class="glide__slide-heading">
-                                    Mark Smith
-                                    <span class="glide__slide-heading--span"
-                                        >/ Travel Enthusiast</span
-                                    >
-                                </h4>
-                                <div class="glide__icon-container">
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                </div>
-                            </div>
-                            <p
-                                class="text text--md text--center text--gray line-clamp"
-                            >
-                                Contrary to popular belief, Lorem Ipsum is not
-                                simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC.
-                            </p>
-                        </li>
-                        <li class="glide__slide">
-                            <img
-                                class="testimonial__img"
-                                src="/assets/img/carousel.png"
-                                alt="carousel slide image"
-                            />
-                            <div class="glide__slide-desc">
-                                <h4 class="glide__slide-heading">
-                                    Mark Smith
-                                    <span class="glide__slide-heading--span"
-                                        >/ Travel Enthusiast</span
-                                    >
-                                </h4>
-                                <div class="glide__icon-container">
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                </div>
-                            </div>
-                            <p
-                                class="text text--md text--center text--gray line-clamp"
-                            >
-                                Contrary to popular belief, Lorem Ipsum is not
-                                simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC.
-                            </p>
-                        </li>
-                        <li class="glide__slide">
-                            <img
-                                class="testimonial__img"
-                                src="/assets/img/carousel.png"
-                                alt="carousel slide image"
-                            />
-                            <div class="glide__slide-desc">
-                                <h4 class="glide__slide-heading">
-                                    Mark Smith
-                                    <span class="glide__slide-heading--span"
-                                        >/ Travel Enthusiast</span
-                                    >
-                                </h4>
-                                <div class="glide__icon-container">
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                    <i class="icon icon--star glide__icon"></i>
-                                </div>
-                            </div>
-                            <p
-                                class="text text--md text--center text--gray line-clamp"
-                            >
-                                Contrary to popular belief, Lorem Ipsum is not
-                                simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC.
-                            </p>
-                        </li>
-                    </ul>
+                    <ul id="carousel-container" class="glide__slides"></ul>
                 </div>
                 <div
+                    id="bullet-container"
                     class="glide__bullets glide__bullet-container"
                     data-glide-el="controls[nav]"
-                >
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                    <button class="glide__bullet" data-glide-dir="=2"></button>
-                </div>
+                ></div>
                 <div
                     class="glide__arrows glide__arrow-container"
                     data-glide-el="controls"
@@ -526,7 +445,7 @@
         </section>
 
         <!-- Footer Section -->
-        <section class="footer">
+        <section id="footer" class="footer">
             <div class="footer__heading-container">
                 <div class="footer__img-container">
                     <img
@@ -543,15 +462,27 @@
                 </p>
                 <div class="footer__icon-container">
                     <a
-                        href="#"
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="footer__icon-wrapper footer__icon-wrapper--facebook"
                     >
                         <i class="icon icon--facebook"></i>
                     </a>
-                    <a href="#" class="footer__icon-wrapper">
+                    <a
+                        href="https://x.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__icon-wrapper"
+                    >
                         <i class="icon icon--twitter"></i>
                     </a>
-                    <a href="#" class="footer__icon-wrapper">
+                    <a
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__icon-wrapper"
+                    >
                         <i class="icon icon--instagram"></i>
                     </a>
                 </div>
@@ -560,20 +491,20 @@
                 <div class="list">
                     <div class="list__heading-container">
                         <h2 class="list__heading">Company</h2>
-                        <i
+                        <button
                             class="icon icon--arrow-circle list__icon"
                             data-target="list-1"
-                        ></i>
+                        ></button>
                     </div>
                     <ul id="list-1" class="list__item-container d_hidden">
                         <li class="text text--sm text--gray list__item">
-                            About
+                            <a class="list__item-link" href="#">About</a>
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            Career
+                            <a class="list__item-link" href="#">Career</a>
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            Mobile
+                            <a class="list__item-link" href="#">Mobile</a>
                         </li>
                     </ul>
                 </div>
@@ -582,46 +513,58 @@
                         <h2 class="list__heading">
                             Contact <span class="list__heading--span">Us</span>
                         </h2>
-                        <i
+                        <button
                             class="icon icon--arrow-circle list__icon"
                             data-target="list-2"
-                        ></i>
+                        ></button>
                     </div>
                     <ul id="list-2" class="list__item-container d_hidden">
                         <li class="text text--sm text--gray list__item">
-                            Why Travlog?
+                            <a class="list__item-link" href="#">Why Travlog?</a>
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            Partner with us
+                            <a class="list__item-link" href="#"
+                                >Partner with us</a
+                            >
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            FAQ's
+                            <a class="list__item-link" href="#">FAQ's</a>
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            Blog
+                            <a class="list__item-link" href="#">Blog</a>
                         </li>
                     </ul>
                 </div>
                 <div class="list">
                     <div class="list__heading-container">
                         <h2 class="list__heading">Meet Us</h2>
-                        <i
+                        <button
                             class="icon icon--arrow-circle list__icon"
                             data-target="list-3"
-                        ></i>
+                        ></button>
                     </div>
                     <ul id="list-3" class="list__item-container d_hidden">
                         <li class="text text--sm text--gray list__item">
-                            +00 92 1234 56789
+                            <a
+                                class="list__item-link"
+                                href="tel:+00 92 1234 56789"
+                                >+00 92 1234 56789</a
+                            >
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            info@travlog.com
+                            <a
+                                class="list__item-link"
+                                href="mailto:info@travlog.com"
+                                >info@travlog.com</a
+                            >
                         </li>
                         <li class="text text--sm text--gray list__item">
-                            205. R Street, New York
-                        </li>
-                        <li class="text text--sm text--gray list__item">
-                            BD23200
+                            <a class="list__item-link" href="#">
+                                205. R Street, New York
+                                <span class="list__item-link--span"
+                                    >BD23200</span
+                                >
+                            </a>
                         </li>
                     </ul>
                 </div>

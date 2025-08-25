@@ -46,10 +46,9 @@
         @include responsive('md') {
             display: block;
         }
-
-        @include responsive('lg') {
-            display: none;
-        }
+    }
+    @include responsive('lg') {
+        display: none;
     }
 
     &:focus {
@@ -109,8 +108,9 @@
             }
         }
     }
-
+    display: none;
     &.active {
+        display: flex;
         transform: translateY(0);
     }
 
@@ -128,13 +128,19 @@
         @include typography(4rem, 400, $gray200);
         position: absolute;
         top: 5rem;
-        left: 5rem;
+        right: 5rem;
+        padding: 0 0.5rem;
+        &:focus {
+            outline: 0.2rem solid $violet;
+        }
+
         @include responsive('lg') {
             display: none;
         }
     }
 }
 .login_signup_container {
+    @include flex-container(column, center, center, 1rem);
     order: 3;
 
     @include responsive('md') {

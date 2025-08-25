@@ -88,6 +88,9 @@
 
         &--watch {
             @include flex-container(row, center, center, 0.8rem);
+            .link {
+                text-decoration: none;
+            }
             .icon--play::before {
                 color: $violet;
                 font-size: 2rem;
