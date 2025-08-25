@@ -1,4 +1,4 @@
-import { TABLET_BREAKPOINT } from './constants.js';
+import { MOBILE_BREAKPOINT } from './constants.js';
 import Glide from '@glidejs/glide';
 
 const hamburgerIcon = document.getElementById('hamburger');
@@ -9,6 +9,11 @@ const footerIcons = document.querySelectorAll('.list__icon');
 const focusable = document.querySelectorAll('.nav__item');
 const first = focusable[0];
 const last = focusable[focusable.length - 1];
+const crossBtn = document.getElementsByClassName('cross')[0];
+const header = document.getElementsByClassName('header_container')[0];
+const loginSignup = document.getElementsByClassName(
+    'login_signup_container',
+)[0];
 
 
 hamburgerIcon.addEventListener('click', () => {
@@ -22,15 +27,9 @@ hamburgerIcon.addEventListener('keydown', (e) => {
     }
 });
 
-document.addEventListener('click', (e) => {
-    if (document.body.offsetWidth >= TABLET_BREAKPOINT) return;
-    if (
-        !navItemsContainer.contains(e.target) &&
-        !hamburgerIcon.contains(e.target)
-    ) {
-        navItemsContainer.classList.remove('active');
-        hamburgerIcon.classList.remove('d_hidden');
-    }
+crossBtn.addEventListener('click', () => {
+    navItemsContainer.classList.remove('active');
+    hamburgerIcon.classList.remove('d_hidden');
 });
 
 new Glide('.glide').mount();
@@ -67,4 +66,22 @@ navItemsContainer.addEventListener('keydown', (e) => {
             }
         }
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    function handleResponsive() {
+        if (document.body.offsetWidth < MOBILE_BREAKPOINT) {
+            if (!navItemsContainer.contains(loginSignup)) {
+                navItemsContainer.appendChild(loginSignup);
+            }
+        } else {
+            if (loginSignup.parentNode !== header) {
+                header.appendChild(loginSignup);
+            }
+        }
+    }
+
+    handleResponsive();
+
+    window.addEventListener('resize', handleResponsive);
 });

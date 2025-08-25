@@ -72,6 +72,18 @@
             @include responsive('lg') {
                 margin: 2rem 0 0;
             }
+
+            &:hover {
+                box-shadow: $shadow-lg;
+            }
+
+            &:focus {
+                outline: 0.2rem solid $violet;
+            }
+
+            &:active {
+                background-color: darken($violet, 10%);
+            }
         }
 
         &--watch {
