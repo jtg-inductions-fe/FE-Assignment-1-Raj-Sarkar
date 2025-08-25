@@ -26,10 +26,10 @@
                     aria-label="Toggle navigation menu"
                 ></button>
                 <ul class="nav_item_container">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Discover</a></li>
-                    <li><a href="#">Special Deals</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="nav__item">Home</a></li>
+                    <li><a href="#" class="nav__item">Discover</a></li>
+                    <li><a href="#" class="nav__item">Special Deals</a></li>
+                    <li><a href="#" class="nav__item">Contact</a></li>
                 </ul>
             </nav>
             <div class="login_signup_container">
@@ -522,6 +522,108 @@
                 alt=""
                 aria-hidden="true"
             />
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer">
+            <div class="footer__heading-container">
+                <div class="footer__img-container">
+                    <img
+                        class="footer__img"
+                        src="/assets/img/logo.png"
+                        alt="Logo"
+                    />
+                    <h1 class="footer__heading">Travlog</h1>
+                </div>
+                <p class="footer__heading footer__heading--p">
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC.
+                </p>
+                <div class="footer__icon-container">
+                    <div
+                        class="footer__icon-wrapper footer__icon-wrapper--facebook"
+                    >
+                        <i class="icon icon--facebook"></i>
+                    </div>
+                    <div class="footer__icon-wrapper">
+                        <i class="icon icon--twitter"></i>
+                    </div>
+                    <div class="footer__icon-wrapper">
+                        <i class="icon icon--instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__desc-container">
+                <div class="list">
+                    <div class="list__heading-container">
+                        <h2 class="list__heading">Company</h2>
+                        <i
+                            class="icon icon--arrow-circle list__icon"
+                            data-target="list-1"
+                        ></i>
+                    </div>
+                    <ul id="list-1" class="list__item-container d_hidden">
+                        <li class="text text--sm text--gray list__item">
+                            About
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            Career
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            Mobile
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="list__heading-container">
+                        <h2 class="list__heading">
+                            Contact <span class="list__heading--span">Us</span>
+                        </h2>
+                        <i
+                            class="icon icon--arrow-circle list__icon"
+                            data-target="list-2"
+                        ></i>
+                    </div>
+                    <ul id="list-2" class="list__item-container d_hidden">
+                        <li class="text text--sm text--gray list__item">
+                            Why Travlog?
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            Partner with us
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            FAQ's
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            Blog
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="list__heading-container">
+                        <h2 class="list__heading">Meet Us</h2>
+                        <i
+                            class="icon icon--arrow-circle list__icon"
+                            data-target="list-3"
+                        ></i>
+                    </div>
+                    <ul id="list-3" class="list__item-container d_hidden">
+                        <li class="text text--sm text--gray list__item">
+                            +00 92 1234 56789
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            info@travlog.com
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            205. R Street, New York
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            BD23200
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <script type="module" src="src/script/index.js"></script>
