@@ -4,6 +4,7 @@ import Glide from '@glidejs/glide';
 const hamburgerIcon = document.getElementById('hamburger');
 const navItemsContainer =
     document.getElementsByClassName('nav_item_container')[0];
+const form = document.querySelector('form');
 
 hamburgerIcon.addEventListener('click', () => {
     hamburgerIcon.classList.add('d_hidden');
@@ -28,3 +29,12 @@ document.addEventListener('click', (e) => {
 });
 
 new Glide('.glide').mount();
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (form.checkValidity()) {
+        alert('Form is submitted');
+    } else {
+        form.reportValidity();
+    }
+});
