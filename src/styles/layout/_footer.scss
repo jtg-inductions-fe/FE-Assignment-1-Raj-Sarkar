@@ -54,6 +54,19 @@
         background-color: $violet;
         border-radius: 50%;
         padding: 0.5rem;
+        text-decoration: none;
+        &:hover {
+            color: $black;
+            transform: scale(1.2);
+        }
+
+        &:focus {
+            outline: 0.2rem solid $black;
+        }
+
+        &:active {
+            color: darken($violet, 10%);
+        }
 
         &--facebook {
             background-color: $white;

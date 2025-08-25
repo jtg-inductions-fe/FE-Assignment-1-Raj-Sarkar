@@ -15,7 +15,6 @@ const loginSignup = document.getElementsByClassName(
     'login_signup_container',
 )[0];
 
-
 hamburgerIcon.addEventListener('click', () => {
     hamburgerIcon.classList.add('d_hidden');
     navItemsContainer.classList.add('active');
@@ -70,7 +69,7 @@ navItemsContainer.addEventListener('keydown', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     function handleResponsive() {
-        if (document.body.offsetWidth < MOBILE_BREAKPOINT) {
+        if (window.innerWidth < MOBILE_BREAKPOINT) {
             if (!navItemsContainer.contains(loginSignup)) {
                 navItemsContainer.appendChild(loginSignup);
             }
