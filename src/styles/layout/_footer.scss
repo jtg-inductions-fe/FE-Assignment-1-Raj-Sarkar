@@ -1,0 +1,149 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+    @include flex-container(column, center, center, 9.4rem);
+    margin: 9.5rem 1.6rem;
+    @include responsive('md') {
+        margin: 6.4rem;
+        gap: 6.4rem;
+    }
+
+    @include responsive('lg') {
+        @include flex-container(row, start, start, 1rem);
+        margin: 13.7rem 12rem 6rem 12.79rem;
+        padding-top: 6.4rem;
+    }
+
+    &__heading-container {
+        @include flex-container(column, start, start, 2.6rem);
+    }
+
+    &__img-container {
+        @include flex-container(row, start, end, 1.6rem);
+        @include responsive('md') {
+            align-items: center;
+        }
+    }
+
+    &__img {
+        width: 4rem;
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+
+        &--p {
+            @include typography(1.6rem, 400, $gray100, 160%);
+            margin-top: 0.8rem;
+            @include responsive('md') {
+                font-size: 2.25rem;
+            }
+        }
+    }
+
+    &__icon-container {
+        @include flex-container(row, start, center, 3.2rem);
+        margin-top: 0.5rem;
+        @include responsive('lg') {
+            margin-top: 3.8rem;
+        }
+    }
+
+    &__icon-wrapper {
+        background-color: $violet;
+        border-radius: 50%;
+        padding: 0.5rem;
+        text-decoration: none;
+        &:hover {
+            color: $black;
+            transform: scale(1.2);
+        }
+
+        &:focus {
+            outline: 0.2rem solid $black;
+        }
+
+        &:active {
+            color: darken($violet, 10%);
+        }
+
+        &--facebook {
+            background-color: $white;
+            padding: 0;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: $white;
+
+            &--facebook {
+                color: $violet;
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    &__desc-container {
+        @include flex-container(column, center, center, 7.1rem);
+        width: 100%;
+        @include responsive('md') {
+            @include flex-container(row, center, start, 3.2rem);
+        }
+
+        @include responsive('lg') {
+            gap: 3.8rem;
+        }
+    }
+}
+
+.list {
+    width: 100%;
+
+    &__heading-container {
+        @include flex-container(row, space-between);
+        .icon {
+            font-size: 2.4rem;
+            @include responsive('md') {
+                display: none;
+            }
+
+            &:focus {
+                outline: 0.2rem solid $violet;
+            }
+
+            &.rotated {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 2.3rem;
+
+        &--span {
+            @include responsive('md') {
+                display: none;
+            }
+        }
+    }
+
+    &__item-container {
+        @include flex-container(column, start, start, 3.2rem);
+        margin-top: 3.2rem;
+    }
+
+    &__item-link {
+        text-decoration: none;
+
+        &:hover {
+            color: $black;
+        }
+        &--span {
+            display: block;
+            @include responsive('md') {
+                margin-top: 0.8rem;
+            }
+        }
+    }
+}

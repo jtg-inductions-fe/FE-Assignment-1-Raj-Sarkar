@@ -1,0 +1,31 @@
+$light: #eeeeee;
+$white: #ffffff;
+$black: #191825;
+$success: #22c55e;
+$error: #ef4444;
+$warning: #f97316;
+$info: #3b82f6;
+$gray200: #808080;
+$gray100: #19182580;
+$pink: #f85e9f;
+$violet: #5d50c6;
+$orange: #ff5722;
+$yellow: #facd49;
+
+$radius-sm: 0.4rem;
+$radius-md: 0.8rem;
+$radius-lg: 1.2rem;
+$radius-xl: 2.5rem;
+$radius-xxl: 3.2rem;
+$radius-full: 9999px;
+
+$shadow-sm: 0 0.1rem 0.2rem #0000000d;
+$shadow-md: 0 3.4rem 7.5rem #00000012;
+$shadow-lg: 0 2rem 2rem #00000026;
+
+$breakpoints: (
+    'xs': 320px,
+    'sm': 480px,
+    'md': 768px,
+    'lg': 1200px,
+);

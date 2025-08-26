@@ -1,13 +1,576 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Base setup with SCSS architecture, reset, variables, mixins, and initial JS wiring."
+        />
+        <link rel="stylesheet" href="/assets/icons.css" />
         <link rel="stylesheet" href="src/styles/main.scss" />
+        <title>Assignment 1</title>
     </head>
+
     <body>
-        <div>Hello World</div>
-        <script type="module" src="./src/script/index.js"></script>
+        <!-- Header Section -->
+        <section class="header_container">
+            <a class="logo_container" href="#hero">
+                <img class="logo" src="/assets/img/logo.png" alt="Logo" />
+            </a>
+            <nav class="navbar">
+                <button
+                    id="hamburger"
+                    class="icon icon--hamburger"
+                    type="button"
+                    aria-label="Toggle navigation menu"
+                ></button>
+                <ul class="nav_item_container">
+                    <button id="cross-btn" class="cross nav__item">x</button>
+                    <li><a href="#hero" class="nav__item">Home</a></li>
+                    <li><a href="#services" class="nav__item">Discover</a></li>
+                    <li>
+                        <a href="#key-feature" class="nav__item"
+                            >Special Deals</a
+                        >
+                    </li>
+                    <li><a href="#footer" class="nav__item">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="login_signup_container">
+                <button class="nav__btn">Log In</button>
+                <button class="signup nav__btn">Sign Up</button>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero__img-container">
+                <img
+                    class="hero__img"
+                    src="/assets/img/hero.png"
+                    alt="Hero-img"
+                />
+            </div>
+            <div class="hero__desc-container">
+                <button
+                    class="hero__button hero__button--explore"
+                    aria-label="Explore the world"
+                >
+                    <span>Explore the world!</span>
+                    <i class="icon icon--bag" aria-hidden="true"></i>
+                </button>
+                <div class="hero__desc">
+                    <h1
+                        class="heading heading--xl hero__heading hero__heading--h1 line-clamp"
+                    >
+                        Travel
+                        <span class="heading heading--pink"
+                            >top destination</span
+                        >
+                        of the world
+                    </h1>
+                    <p
+                        class="text text--sm text--gray hero__heading hero__heading--p line-clamp"
+                    >
+                        We always make our customer happy by providing
+                        <span class="text hero__heading--span"
+                            >as many choices as possible</span
+                        >
+                    </p>
+                </div>
+                <div class="hero__button-container">
+                    <button class="btn btn--primary">Get Started</button>
+                    <button
+                        id="watch"
+                        class="hero__button hero__button--watch btn btn--secondary"
+                    >
+                        <i class="icon icon--play" aria-hidden="true"></i>
+                        <p class="link">Watch Demo</p>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img
+                    class="hero__arrow-img"
+                    src="/assets/img/arrow.png"
+                    alt="arrow"
+                    aria-hidden="true"
+                />
+            </div>
+        </section>
+        <div class="wrapper" aria-hidden="true">
+            <div class="ellipse ellipse--primary ellipse--orange"></div>
+        </div>
+
+        <!-- Partner Section -->
+        <section class="partner">
+            <div class="partner__div-container">
+                <div>
+                    <img
+                        class="partner__img"
+                        src="/assets/img/partner1.png"
+                        alt="partner1"
+                    />
+                </div>
+                <div>
+                    <img
+                        class="partner__img"
+                        src="/assets/img/partner2.png"
+                        alt="partner2"
+                    />
+                </div>
+                <div>
+                    <img
+                        class="partner__img"
+                        src="/assets/img/partner3.png"
+                        alt="partner3"
+                    />
+                </div>
+            </div>
+            <div class="partner__div-container">
+                <div>
+                    <img
+                        class="partner__img"
+                        src="/assets/img/partner4.png"
+                        alt="partner4"
+                    />
+                </div>
+                <div>
+                    <img
+                        class="partner__img"
+                        src="/assets/img/partner5.png"
+                        alt="partner5"
+                    />
+                </div>
+            </div>
+        </section>
+        <div class="wrapper" aria-hidden="true">
+            <div class="ellipse ellipse--secondary ellipse--yellow"></div>
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="services__heading-container">
+                <h2
+                    class="heading heading--sm heading--pink services__heading line-clamp"
+                >
+                    SERVICES
+                </h2>
+                <h3
+                    class="heading heading--lg services__heading services__heading--h3 line-clamp"
+                >
+                    Our top value categories for you
+                </h3>
+            </div>
+            <div class="services__card-container">
+                <div class="card services__card">
+                    <img
+                        class="services__img"
+                        src="/assets/img/destination.png"
+                        alt="destination"
+                    />
+                    <h4
+                        class="heading heading--md services__card-heading line-clamp"
+                    >
+                        Best Tour Guide
+                    </h4>
+                    <p class="text text--md text--gray text--center line-clamp">
+                        What looked like a small patch of purple grass, above
+                        five feet.
+                    </p>
+                </div>
+                <div class="card services__card">
+                    <img
+                        class="services__img"
+                        src="/assets/img/booking.png"
+                        alt="booking"
+                    />
+                    <h4
+                        class="heading heading--md services__card-heading line-clamp"
+                    >
+                        Easy Booking
+                    </h4>
+                    <p class="text text--md text--gray text--center line-clamp">
+                        Square, was moving across the sand in their direction.
+                    </p>
+                </div>
+                <div class="card services__card services__card--extra">
+                    <img
+                        class="services__img"
+                        src="/assets/img/cloudy.png"
+                        alt="cloudy"
+                    />
+                    <h4
+                        class="heading heading--md services__card-heading line-clamp"
+                    >
+                        Weather Forecast
+                    </h4>
+                    <p class="text text--md text--gray text--center line-clamp">
+                        What looked like a small patch of purple grass, above
+                        five feet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Point Section -->
+        <section class="travel">
+            <div class="travel__img-container">
+                <img
+                    class="travel__img"
+                    src="/assets/img/travel_point.png"
+                    alt="travel point"
+                />
+            </div>
+            <div class="travel__desc">
+                <h2
+                    class="heading heading--sm heading--pink travel__heading line-clamp"
+                >
+                    TRAVEL POINT
+                </h2>
+                <h3
+                    class="heading heading--lg travel__heading travel__heading--h3 line-clamp"
+                >
+                    We helping you find your dream location
+                </h3>
+                <p
+                    class="text text--sm text--gray text--mt text--center travel__heading line-clamp"
+                >
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC.
+                </p>
+                <div class="travel__card-container">
+                    <div class="card travel__card">
+                        <h4 class="travel__card-heading">500+</h4>
+                        <p class="text text--md">Holiday Package</p>
+                    </div>
+                    <div class="card travel__card">
+                        <h4 class="travel__card-heading">100</h4>
+                        <p class="text text--md">Luxury Hotel</p>
+                    </div>
+                    <div class="card travel__card">
+                        <h4 class="travel__card-heading">7</h4>
+                        <p class="text text--md">Premium Airlines</p>
+                    </div>
+                    <div class="card travel__card">
+                        <h4 class="travel__card-heading">2k+</h4>
+                        <p class="text text--md">Happy Customer</p>
+                    </div>
+                </div>
+                <img
+                    class="travel__img travel__img--abs"
+                    src="/assets/img/travel_point_2.png"
+                    alt="travel coupon design"
+                />
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section id="key-feature" class="key-feature">
+            <div class="key-feature__img-container">
+                <img
+                    class="key-feature__img"
+                    src="/assets/img/key_feature_background.png"
+                    alt="Key features background illustration"
+                />
+            </div>
+            <div class="key-feature__desc">
+                <div class="key-feature__heading-container">
+                    <h2
+                        class="heading heading--sm heading--pink key-feature__heading line-clamp"
+                    >
+                        KEY FEATURES
+                    </h2>
+                    <h3
+                        class="heading heading--lg key-feature__heading key-feature__heading--h3 line-clamp"
+                    >
+                        We offer best services
+                    </h3>
+                    <p
+                        class="text text--sm text--gray text--center text--mt key-feature__heading line-clamp"
+                    >
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature
+                        <span class="text key-feature__heading--span"
+                            >from 45 BC.</span
+                        >
+                    </p>
+                </div>
+                <div class="key-feature__card-container">
+                    <div class="card key-feature__card">
+                        <div
+                            class="key-feature__icon-container key-feature__icon-container--orange"
+                        >
+                            <i class="icon icon--location"></i>
+                        </div>
+                        <div>
+                            <h4
+                                class="heading heading--md key-feature__card-text key-feature__card-text--h4 line-clamp"
+                            >
+                                We offer best services
+                            </h4>
+                            <p
+                                class="text text--md text--gray key-feature__card-text line-clamp"
+                            >
+                                Lorem Ipsum is not simply random text
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card key-feature__card">
+                        <div
+                            class="key-feature__icon-container key-feature__icon-container--yellow"
+                        >
+                            <i class="icon icon--calendar"></i>
+                        </div>
+                        <div>
+                            <h4
+                                class="heading heading--md key-feature__card-text key-feature__card-text--h4 line-clamp"
+                            >
+                                Schedule your trip
+                            </h4>
+                            <p
+                                class="text text--md text--gray key-feature__card-text line-clamp"
+                            >
+                                It has roots in a piece of classical
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card key-feature__card">
+                        <div
+                            class="key-feature__icon-container key-feature__icon-container--pink"
+                        >
+                            <i class="icon icon--coupon"></i>
+                        </div>
+                        <div>
+                            <h4
+                                class="heading heading--md key-feature__card-text key-feature__card-text--h4 line-clamp"
+                            >
+                                Get discounted coupons
+                            </h4>
+                            <p
+                                class="text text--md text--gray key-feature__card-text line-clamp"
+                            >
+                                Lorem Ipsum is not simply random text
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial">
+            <h2
+                class="heading heading--sm heading--pink testimonial__heading--h2 line-clamp"
+            >
+                TESTIMONIALS
+            </h2>
+            <h3 class="heading heading--lg testimonial__heading line-clamp">
+                Trust our clients
+            </h3>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul id="carousel-container" class="glide__slides"></ul>
+                </div>
+                <div
+                    id="bullet-container"
+                    class="glide__bullets glide__bullet-container"
+                    data-glide-el="controls[nav]"
+                ></div>
+                <div
+                    class="glide__arrows glide__arrow-container"
+                    data-glide-el="controls"
+                >
+                    <button
+                        class="glide__arrow glide__arrow--left btn btn--secondary"
+                        data-glide-dir="<"
+                        aria-label="carousel left arrow"
+                    >
+                        <i class="icon icon--arrow-left"></i>
+                    </button>
+                    <button
+                        class="glide__arrow glide__arrow--right btn btn--primary"
+                        data-glide-dir=">"
+                        aria-label="carousel left arrow"
+                    >
+                        <i class="icon icon--arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Letter Section -->
+        <section class="newsletter">
+            <img
+                class="newsletter__img"
+                src="/assets/img/newsletter_design.png"
+                alt=""
+                aria-hidden="true"
+            />
+            <h2 class="heading heading--sm heading--pink line-clamp">
+                SUBSCRIBE TO OUR NEWSLETTER
+            </h2>
+            <h3 class="heading heading--lg newsletter__heading line-clamp">
+                Prepare yourself & let's explore the beauty of the world
+            </h3>
+            <form class="newsletter__desc">
+                <div class="newsletter__input-container">
+                    <i class="icon icon--mail"></i>
+                    <input
+                        class="newsletter__input"
+                        type="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                </div>
+                <button
+                    class="btn btn--primary newsletter__button"
+                    type="submit"
+                >
+                    Subscribe
+                </button>
+            </form>
+            <img
+                class="newsletter__img newsletter__img--waves"
+                src="/assets/img/subscribe_design.png"
+                alt=""
+                aria-hidden="true"
+            />
+        </section>
+
+        <!-- Footer Section -->
+        <section id="footer" class="footer">
+            <div class="footer__heading-container">
+                <div class="footer__img-container">
+                    <img
+                        class="footer__img"
+                        src="/assets/img/logo.png"
+                        alt="Logo"
+                    />
+                    <h1 class="footer__heading">Travlog</h1>
+                </div>
+                <p class="footer__heading footer__heading--p line-clamp">
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC.
+                </p>
+                <div class="footer__icon-container">
+                    <a
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__icon-wrapper footer__icon-wrapper--facebook"
+                        aria-label="icon facebook"
+                    >
+                        <i class="icon icon--facebook"></i>
+                    </a>
+                    <a
+                        href="https://x.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__icon-wrapper"
+                        aria-label="icon twitter"
+                    >
+                        <i class="icon icon--twitter"></i>
+                    </a>
+                    <a
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__icon-wrapper"
+                        aria-label="icon instagram"
+                    >
+                        <i class="icon icon--instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__desc-container">
+                <div class="list">
+                    <div class="list__heading-container">
+                        <h2 class="list__heading">Company</h2>
+                        <button
+                            class="icon icon--arrow-circle list__icon"
+                            data-target="list-1"
+                        ></button>
+                    </div>
+                    <ul id="list-1" class="list__item-container d_hidden">
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#">About</a>
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#">Career</a>
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#">Mobile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="list__heading-container">
+                        <h2 class="list__heading">
+                            Contact <span class="list__heading--span">Us</span>
+                        </h2>
+                        <button
+                            class="icon icon--arrow-circle list__icon"
+                            data-target="list-2"
+                        ></button>
+                    </div>
+                    <ul id="list-2" class="list__item-container d_hidden">
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#">Why Travlog?</a>
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#"
+                                >Partner with us</a
+                            >
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#">FAQ's</a>
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <a class="list__item-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="list__heading-container">
+                        <h2 class="list__heading">Meet Us</h2>
+                        <button
+                            class="icon icon--arrow-circle list__icon"
+                            data-target="list-3"
+                        ></button>
+                    </div>
+                    <ul id="list-3" class="list__item-container d_hidden">
+                        <li class="text text--sm text--gray list__item">
+                            <a
+                                class="list__item-link"
+                                href="tel:+00 92 1234 56789"
+                                >+00 92 1234 56789</a
+                            >
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <a
+                                class="list__item-link"
+                                href="mailto:info@travlog.com"
+                                >info@travlog.com</a
+                            >
+                        </li>
+                        <li class="text text--sm text--gray list__item">
+                            <p class="list__item-link">
+                                205. R Street, New York
+                                <span class="list__item-link--span"
+                                    >BD23200</span
+                                >
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <script type="module" src="src/script/index.js"></script>
     </body>
 </html>

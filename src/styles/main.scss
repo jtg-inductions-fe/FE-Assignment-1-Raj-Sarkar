@@ -1,1 +1,13 @@
 // TODO: Add styles as per the requirement
+@use './base/common' as *;
+@use './abstracts/variable' as *;
+@use './abstracts/mixins' as *;
+@use './layout/header' as header;
+@use './layout/hero' as hero;
+@use './layout/partner' as partner;
+@use './layout/services' as services;
+@use './layout/travelpoint' as travelpoint;
+@use './layout/keyfeature' as keyfeature;
+@use './layout/testimonial' as testimonial;
+@use './layout/newsletter' as newsletter;
+@use './layout/footer' as footer;
