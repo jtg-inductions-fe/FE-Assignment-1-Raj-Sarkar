@@ -102,7 +102,7 @@ footerIcons.forEach((icon) => {
     icon.addEventListener('click', () => {
         const targetId = icon.getAttribute('data-target');
         const list = document.getElementById(targetId);
-        list.classList.toggle('d_hidden');
+        list.classList.toggle('list__item-container--hidden');
         icon.classList.toggle('rotated');
     });
     icon.addEventListener('keydown', (e) => {
