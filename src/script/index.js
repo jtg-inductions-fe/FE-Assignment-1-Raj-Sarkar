@@ -11,6 +11,11 @@ const header = document.getElementsByClassName('header_container')[0];
 const loginSignup = document.getElementsByClassName(
     'login_signup_container',
 )[0];
+const watchBtn = document.getElementById('watch');
+
+watchBtn.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com';
+});
 const slides = [
     {
         image: '/assets/img/carousel.png',
@@ -56,7 +61,7 @@ slides.forEach((slide, index) => {
       </li>
     `;
     container.insertAdjacentHTML('beforeend', li);
-    const bullet = `<button class="glide__bullet" data-glide-dir="=${index}"></button>`;
+    const bullet = `<button class="glide__bullet" data-glide-dir="=${index}" aria-label="bullet ${index}"></button>`;
     bulletContainer.insertAdjacentHTML('beforeend', bullet);
 });
 

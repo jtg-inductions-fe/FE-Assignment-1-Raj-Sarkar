@@ -137,6 +137,10 @@
 
     &__item-link {
         text-decoration: none;
+
+        &:hover {
+            color: $black;
+        }
         &--span {
             display: block;
             @include responsive('md') {
