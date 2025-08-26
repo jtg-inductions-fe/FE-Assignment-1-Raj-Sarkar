@@ -64,10 +64,15 @@
 
     &__input {
         width: 100%;
+        height: 100%;
         font-size: 1.4rem;
         font-weight: 700;
         @include responsive('md') {
             font-size: 2.3rem;
+        }
+
+        &:focus {
+            outline: 0.2rem solid $violet;
         }
     }
 

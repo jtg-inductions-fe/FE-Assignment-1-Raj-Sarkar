@@ -101,6 +101,14 @@
             &--active {
                 background-color: $pink;
             }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: 0.2rem solid $violet;
+            }
         }
 
         &__arrow-container {
@@ -125,21 +133,21 @@
             &--left {
                 background-color: $white;
                 @include responsive('md') {
-                    right: 70.5rem;
+                    right: 99%;
                 }
 
                 @include responsive('lg') {
-                    right: 108rem;
+                    right: 91.5%;
                 }
             }
 
             &--right {
                 @include responsive('md') {
-                    left: 70.5rem;
+                    left: 99%;
                 }
 
                 @include responsive('lg') {
-                    left: 109.5rem;
+                    left: 92.5%;
                 }
             }
 
