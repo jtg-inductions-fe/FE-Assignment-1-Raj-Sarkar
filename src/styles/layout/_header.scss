@@ -1,10 +1,21 @@
 @use '../abstracts/variable' as *;
 @use '../abstracts/mixins' as *;
 
+.main-container {
+    padding: 0 1.6rem;
+    @include responsive('md') {
+        padding: 0 6.4rem;
+    }
+
+    @include responsive('lg') {
+        padding: 0 12.75rem;
+    }
+}
+
 .header_container {
     @include flex-container(row, space-between);
     position: relative;
-    padding: 3.5rem 2rem;
+    padding: 3.5rem 0.4rem;
 
     @include responsive('md') {
         padding: 3.2rem 6.5rem;
@@ -89,6 +100,7 @@
     background-color: $white;
     transform: translateY(-100%);
     z-index: 999;
+    display: none;
 
     li {
         padding: 1rem 0;
@@ -116,7 +128,6 @@
             }
         }
     }
-    display: none;
     &.active {
         display: flex;
         transform: translateY(0);
