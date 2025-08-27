@@ -2,7 +2,8 @@
 @use '../abstracts/mixins' as *;
 
 .newsletter {
-    margin-top: 6.9rem;
+    @include flex-container(column, start, start, 6.4rem);
+    margin-top: 7rem;
     padding: 0 3.2rem;
     position: relative;
 
@@ -18,8 +19,11 @@
         padding: 12.4rem 5.8rem 12.1rem 7rem;
     }
 
+    &__heading-container {
+        @include flex-container(column, center, center, 3.2rem);
+    }
+
     &__heading {
-        margin-top: 3.2rem;
         @include responsive('md') {
             margin-top: 3.4rem;
         }
@@ -36,7 +40,7 @@
 
     &__desc {
         @include flex-container(column, center, start, 3.2rem);
-        margin-top: 6.4rem;
+        width: 100%;
         @include responsive('md') {
             flex-direction: row;
             align-items: stretch;
@@ -50,6 +54,7 @@
         color: rgba($black, 0.75);
         background-color: $white;
         border-radius: $radius-xl;
+        width: 100%;
         @include responsive('md') {
             flex-grow: 1;
         }

@@ -3,7 +3,7 @@
 
 .partner {
     @include flex-container(column, center, center, 3.2rem);
-    margin: 0.3rem 0 6.4rem;
+    margin-top: 4.5rem;
 
     @include responsive('md') {
         margin-top: 9.6rem;

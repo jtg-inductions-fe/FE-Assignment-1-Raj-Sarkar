@@ -2,7 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .services {
-    padding: 0 0 6.5rem;
+    @include flex-container(column, center, center, 3.2rem);
+    margin-top: 6.4rem;
+    padding: 0;
     @include responsive('md') {
         padding: 6.4rem;
     }
@@ -13,6 +15,7 @@
     }
 
     &__heading-container {
+        @include flex-container(column, center, center, 1.6rem);
         @include responsive('lg') {
             padding: 6rem 0 0 2rem;
         }
@@ -22,15 +25,10 @@
         @include responsive('lg') {
             text-align: start;
         }
-
-        &--h3 {
-            margin-top: 1.6rem;
-        }
     }
 
     &__card-container {
         @include flex-container(column, center, center, 1.6rem);
-        margin-top: 3.2rem;
         @include responsive('md') {
             flex-direction: row;
             margin-top: 6.4rem;

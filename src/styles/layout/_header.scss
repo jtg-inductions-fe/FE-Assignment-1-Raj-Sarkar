@@ -15,7 +15,8 @@
 .header_container {
     @include flex-container(row, space-between);
     position: relative;
-    padding: 3.5rem 0.4rem;
+    margin-top: 3.5rem;
+    padding: 0 0rem;
 
     @include responsive('md') {
         padding: 3.2rem 6.5rem;

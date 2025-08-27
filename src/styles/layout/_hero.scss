@@ -2,8 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .hero {
-    margin-top: 3.5rem;
-    padding: 0 0 6.4rem;
+    @include flex-container(column, center, start, 2.5rem);
+    margin-top: 7rem;
+    padding: 0;
     position: relative;
     @include responsive('lg') {
         @include flex-container(row, center, start, 0rem);
@@ -23,6 +24,10 @@
         }
     }
 
+    &__desc {
+        @include flex-container(column, center, center, 2.4rem);
+    }
+
     &__desc-container {
         @include flex-container(column, center, center, 1.6rem);
         @include responsive('md') {
@@ -38,7 +43,7 @@
 
     &__button-container {
         @include flex-container(column, center, center, 2.4rem);
-        margin-top: 2rem;
+        margin-top: 1.6rem;
         @include responsive('md') {
             margin-top: 3rem;
             flex-direction: row;
@@ -56,7 +61,6 @@
         &--explore {
             @include button(transparent, $pink, 22.4rem, 5.6rem);
             @include flex-container(row, center, center, 2rem);
-            margin-top: 2.5rem;
             span {
                 @include typography(1.4rem, 400, $pink);
             }
@@ -118,8 +122,6 @@
         }
 
         &--p {
-            margin-top: 2.4rem;
-
             @include responsive('md') {
                 padding: 0rem 11rem;
                 margin-top: 3.7rem;

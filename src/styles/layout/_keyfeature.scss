@@ -3,6 +3,7 @@
 
 .key-feature {
     @include flex-container(column, center, center, 10.9rem);
+    margin-top: 9.3rem;
     @include responsive('md') {
         padding: 0 6.4rem 6.4rem;
         gap: 7rem;
@@ -13,8 +14,6 @@
         padding: 5.8rem 0 0 14.2rem;
     }
     &__img-container {
-        margin-top: 9.2rem;
-        padding: 0 2.4rem;
         @include responsive('md') {
             margin: 6.4rem 11.5rem 0rem 9.5rem;
         }
@@ -36,6 +35,7 @@
     }
 
     &__desc {
+        @include flex-container(column, center, center, 3.2rem);
         padding: 0 3.2rem 0;
         @include responsive('md') {
             padding: 0 3.2rem 0;
@@ -48,18 +48,16 @@
     }
 
     &__heading-container {
+        @include flex-container(column, center, center, 1.6rem);
         .text--sm {
             -webkit-line-clamp: 4;
+            margin-top: 1.6rem;
         }
     }
 
     &__heading {
         @include responsive('lg') {
             text-align: start;
-        }
-
-        &--h3 {
-            margin-top: 1.6rem;
         }
 
         &--span {
@@ -94,7 +92,6 @@
 
     &__card-container {
         @include flex-container(column, center, center, 0.8rem);
-        margin-top: 3.2rem;
         @include responsive('md') {
             margin-top: 6.4rem;
             gap: 0;
@@ -102,10 +99,8 @@
     }
 
     &__card {
-        justify-self: start;
-        align-items: start;
+        @include flex-container(column, start, start, 3.2rem);
         border-color: $white;
-        gap: 0;
         @include responsive('md') {
             @include flex-container(row, start, center, 3.2rem);
             width: 100%;
@@ -117,11 +112,14 @@
         }
     }
 
+    &__card-desc {
+        @include flex-container(column, start, start, 0.8rem);
+    }
+
     &__card-text {
         text-align: start;
         &--h4 {
             font-size: 2.3rem;
-            margin: 3.2rem 0 0.8rem;
             @include responsive('md') {
                 margin: 0 0 0.8rem;
             }

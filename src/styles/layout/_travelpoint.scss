@@ -4,6 +4,7 @@
 .travel {
     @include flex-container(column, center, center, 3.7rem);
     padding: 0;
+    margin-top: 6.5rem;
     @include responsive('md') {
         padding: 0 6.4rem 0;
         gap: 6.4rem;
@@ -17,6 +18,7 @@
     }
 
     &__desc {
+        @include flex-container(column, center, center, 3.2rem);
         position: relative;
         @include responsive('md') {
             padding: 0.5rem 3.2rem 6.4rem;
@@ -28,13 +30,17 @@
         }
     }
 
+    &__heading-container {
+        @include flex-container(column, center, center, 1.6rem);
+
+        .text {
+            margin-top: 1.6rem;
+        }
+    }
+
     &__heading {
         @include responsive('lg') {
             text-align: start;
-        }
-
-        &--h3 {
-            margin-top: 1.6rem;
         }
     }
 
@@ -65,7 +71,6 @@
     }
 
     &__card-container {
-        margin-top: 3.2rem;
         display: grid;
         gap: 1.6rem;
         @include responsive('md') {
