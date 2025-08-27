@@ -127,10 +127,6 @@
         }
 
         &--p {
-            @include responsive('md') {
-                padding: 0rem 11rem;
-            }
-
             @include responsive('lg') {
                 padding: 0;
                 margin-top: 4.1rem;
