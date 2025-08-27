@@ -71,6 +71,7 @@
     }
 
     &__card-container {
+        width: 100%;
         display: grid;
         gap: 1.6rem;
         @include responsive('md') {
