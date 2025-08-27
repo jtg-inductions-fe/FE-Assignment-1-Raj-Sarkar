@@ -6,6 +6,11 @@
     margin-top: 7rem;
     padding: 0;
     position: relative;
+    @include responsive('md') {
+        margin-top: 9.5rem;
+        gap: 4.5rem;
+    }
+
     @include responsive('lg') {
         @include flex-container(row, center, start, 0rem);
         padding: 0 0.8rem 4.8rem 2.2rem;
@@ -13,7 +18,9 @@
 
     &__img-container {
         @include responsive('md') {
-            padding: 2.5rem 9rem 2.5rem 11rem;
+            width: 100%;
+            @include flex-container();
+            // padding: 2.5rem 9rem 2.5rem 11rem;
         }
 
         @include responsive('lg') {
@@ -26,12 +33,15 @@
 
     &__desc {
         @include flex-container(column, center, center, 2.4rem);
+        @include responsive('md') {
+            gap: 4.3rem;
+        }
     }
 
     &__desc-container {
         @include flex-container(column, center, center, 1.6rem);
         @include responsive('md') {
-            padding: 0rem 17rem;
+            gap: 4.3rem;
         }
 
         @include responsive('lg') {
@@ -45,7 +55,7 @@
         @include flex-container(column, center, center, 2.4rem);
         margin-top: 1.6rem;
         @include responsive('md') {
-            margin-top: 3rem;
+            margin-top: 0;
             flex-direction: row;
             gap: 1.6rem;
         }
@@ -67,10 +77,6 @@
 
             .icon--bag::before {
                 font-size: 2rem;
-            }
-
-            @include responsive('md') {
-                margin: 2rem;
             }
 
             @include responsive('lg') {
@@ -109,9 +115,8 @@
             padding: 0rem 2rem;
 
             @include responsive('md') {
-                margin-top: 0.9rem;
                 font-weight: 700;
-                padding: 0rem 2.5rem 0rem 1.5rem;
+                padding: 0rem 14rem;
             }
 
             @include responsive('lg') {
@@ -124,7 +129,6 @@
         &--p {
             @include responsive('md') {
                 padding: 0rem 11rem;
-                margin-top: 3.7rem;
             }
 
             @include responsive('lg') {
@@ -135,7 +139,7 @@
         }
 
         &--span {
-            @include responsive('lg') {
+            @include responsive('md') {
                 display: block;
             }
         }
@@ -149,8 +153,8 @@
         @include responsive('md') {
             display: block;
             position: absolute;
-            bottom: 1.4rem;
-            left: 3.8rem;
+            bottom: 0rem;
+            left: -2.5rem;
         }
 
         @include responsive('lg') {

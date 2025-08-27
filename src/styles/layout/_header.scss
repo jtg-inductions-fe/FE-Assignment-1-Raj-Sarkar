@@ -19,7 +19,7 @@
     padding: 0 0rem;
 
     @include responsive('md') {
-        padding: 3.2rem 6.5rem;
+        margin-top: 3.2rem;
     }
 
     @include responsive('lg') {
