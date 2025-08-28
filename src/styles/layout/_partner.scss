@@ -10,8 +10,9 @@
     }
 
     @include responsive('lg') {
-        margin: 5.5rem 0 6.2rem 2rem;
+        margin-top: 10rem;
         flex-direction: row;
+        justify-content: start;
         gap: 10rem;
     }
 
@@ -20,6 +21,8 @@
 
         @include responsive('lg') {
             gap: 10rem;
+            flex-wrap: nowrap;
+            justify-content: space-between;
         }
     }
 

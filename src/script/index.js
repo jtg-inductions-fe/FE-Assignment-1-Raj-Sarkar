@@ -12,10 +12,6 @@ const loginSignup = document.getElementsByClassName(
     'login_signup_container',
 )[0];
 const watchBtn = document.getElementById('watch');
-
-watchBtn.addEventListener('click', () => {
-    window.location.href = 'https://www.youtube.com';
-});
 const slides = [
     {
         image: '/assets/img/carousel.png',
@@ -41,6 +37,10 @@ const slides = [
 ];
 const container = document.getElementById('carousel-container');
 const bulletContainer = document.getElementById('bullet-container');
+const glideTrackDiv = document.getElementsByClassName('glide__track')[0];
+const arrowContainer = document.getElementsByClassName(
+    'glide__arrow-container',
+)[0];
 
 slides.forEach((slide, index) => {
     const stars = Array(slide.starCount)
@@ -63,6 +63,10 @@ slides.forEach((slide, index) => {
     container.insertAdjacentHTML('beforeend', li);
     const bullet = `<button class="glide__bullet" data-glide-dir="=${index}" aria-label="bullet ${index}"></button>`;
     bulletContainer.insertAdjacentHTML('beforeend', bullet);
+});
+
+watchBtn.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com';
 });
 
 hamburgerIcon.addEventListener('click', () => {
@@ -146,10 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!navItemsContainer.contains(loginSignup)) {
                 navItemsContainer.appendChild(loginSignup);
             }
+            bulletContainer.insertAdjacentElement('afterend', arrowContainer);
         } else {
             if (loginSignup.parentNode !== header) {
                 header.appendChild(loginSignup);
             }
+            glideTrackDiv.insertAdjacentElement('afterend', arrowContainer);
         }
     }
 

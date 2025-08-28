@@ -12,21 +12,20 @@
     }
 
     @include responsive('lg') {
-        @include flex-container(row, center, start, 0rem);
-        padding: 0 0.8rem 4.8rem 2.2rem;
+        @include flex-container(row, center, center);
+        margin-top: 9rem;
     }
 
     &__img-container {
         @include responsive('md') {
-            width: 100%;
             @include flex-container();
-            // padding: 2.5rem 9rem 2.5rem 11rem;
+            width: 100%;
         }
 
         @include responsive('lg') {
             padding: 0;
-            margin-left: 1rem;
             order: 1;
+            justify-content: end;
             width: 79rem;
         }
     }
@@ -45,9 +44,8 @@
         }
 
         @include responsive('lg') {
-            @include flex-container(column, center, start);
+            @include flex-container(column, center, start, 4.3rem);
             width: 42rem;
-            padding: 5rem 0rem 5rem 1.5rem;
         }
     }
 
@@ -58,10 +56,6 @@
             margin-top: 0;
             flex-direction: row;
             gap: 1.6rem;
-        }
-
-        @include responsive('lg') {
-            margin-top: 4.1rem;
         }
     }
 
@@ -77,10 +71,6 @@
 
             .icon--bag::before {
                 font-size: 2rem;
-            }
-
-            @include responsive('lg') {
-                margin: 2rem 0 0;
             }
 
             &:hover {
@@ -121,7 +111,6 @@
 
             @include responsive('lg') {
                 padding: 0;
-                margin-top: 4.7rem;
                 text-align: start;
             }
         }
@@ -129,7 +118,6 @@
         &--p {
             @include responsive('lg') {
                 padding: 0;
-                margin-top: 4.1rem;
                 text-align: start;
             }
         }
@@ -154,7 +142,8 @@
         }
 
         @include responsive('lg') {
-            bottom: -5rem;
+            bottom: -9.5rem;
+            left: -9rem;
         }
     }
 }

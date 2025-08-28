@@ -5,18 +5,20 @@
     @include flex-container(column, center, center, 9.4rem);
     margin-top: 9.5rem;
     @include responsive('md') {
-        margin: 6.4rem;
+        margin-top: 6.4rem;
         gap: 6.4rem;
     }
 
     @include responsive('lg') {
         @include flex-container(row, start, start, 1rem);
-        margin: 13.7rem 12rem 6rem 12.79rem;
-        padding-top: 6.4rem;
+        margin-top: 20.3rem;
     }
 
     &__heading-container {
-        @include flex-container(column, start, start, 2.6rem);
+        @include flex-container(column, start, start, 3.5rem);
+        @include responsive('md') {
+            gap: 3.2rem;
+        }
     }
 
     &__img-container {
@@ -35,7 +37,6 @@
 
         &--p {
             @include typography(1.6rem, 400, $gray100, 160%);
-            margin-top: 0.8rem;
             @include responsive('md') {
                 font-size: 2.25rem;
             }
@@ -44,9 +45,8 @@
 
     &__icon-container {
         @include flex-container(row, start, center, 3.2rem);
-        margin-top: 0.5rem;
         @include responsive('lg') {
-            margin-top: 3.8rem;
+            margin-top: 3rem;
         }
     }
 
@@ -92,7 +92,7 @@
         }
 
         @include responsive('lg') {
-            gap: 3.8rem;
+            gap: 3.6rem;
         }
     }
 }

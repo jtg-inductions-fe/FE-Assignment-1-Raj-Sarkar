@@ -10,13 +10,13 @@
     @include responsive('md') {
         background-color: rgba($yellow, 0.08);
         padding: 13.1rem 6.4rem 12.8rem;
-        margin: 0 6rem 0 6.7rem;
+        margin-top: 5.9rem;
         border-radius: $radius-xl;
     }
 
     @include responsive('lg') {
-        margin: 6rem 12.79rem 0;
-        padding: 12.4rem 5.8rem 12.1rem 7rem;
+        margin-top: 12rem;
+        padding: 12.8rem 8rem 12.1rem;
     }
 
     &__heading-container {
@@ -24,17 +24,8 @@
     }
 
     &__heading {
-        @include responsive('md') {
-            margin-top: 3.4rem;
-        }
-
         @include responsive('lg') {
             font-size: 5.5rem;
-        }
-    }
-    .heading--sm {
-        @include responsive('lg') {
-            margin-left: 0.8rem;
         }
     }
 
@@ -44,7 +35,6 @@
         @include responsive('md') {
             flex-direction: row;
             align-items: stretch;
-            margin-top: 6.2rem;
         }
     }
 

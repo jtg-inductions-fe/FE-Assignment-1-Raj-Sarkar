@@ -2,13 +2,18 @@
 @use '../abstracts/mixins' as *;
 
 .main-container {
+    font-family: circular-std;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 144rem;
+    margin: 0 auto;
     padding: 0 1.6rem;
     @include responsive('md') {
         padding: 0 6.4rem;
     }
 
     @include responsive('lg') {
-        padding: 0 12.75rem;
+        padding: 0 10rem 0 12.75rem;
     }
 }
 
@@ -16,14 +21,14 @@
     @include flex-container(row, space-between);
     position: relative;
     margin-top: 3.5rem;
-    padding: 0 0rem;
+    padding: 0;
 
     @include responsive('md') {
         margin-top: 3.2rem;
     }
 
     @include responsive('lg') {
-        padding: 6.5rem 15rem 5.5rem;
+        margin-top: 6.5rem;
     }
 }
 
@@ -42,6 +47,7 @@
     @include responsive('lg') {
         order: 1;
         position: static;
+        transform: translateX(0%);
     }
 
     &:hover {
@@ -62,17 +68,18 @@
     &::before {
         color: $violet;
         font-size: 4.5rem;
+        display: inline-block;
 
         @include responsive('md') {
             display: block;
         }
+
+        &:focus {
+            border: 0.2rem solid $info;
+        }
     }
     @include responsive('lg') {
         display: none;
-    }
-
-    &:focus {
-        border: 0.2rem solid $info;
     }
 }
 

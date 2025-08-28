@@ -6,18 +6,19 @@
     margin-top: 6.4rem;
     padding: 0;
     @include responsive('md') {
-        padding: 6.4rem;
+        margin-top: 12rem;
+        gap: 6.4rem;
     }
 
     @include responsive('lg') {
         @include flex-container();
-        padding: 0rem 12rem 6.5rem 11rem;
+        margin-top: 12.5rem;
     }
 
     &__heading-container {
         @include flex-container(column, center, center, 1.6rem);
         @include responsive('lg') {
-            padding: 6rem 0 0 2rem;
+            align-items: start;
         }
     }
 
@@ -30,15 +31,19 @@
     &__card-container {
         @include flex-container(column, center, center, 1.6rem);
         @include responsive('md') {
-            flex-direction: row;
-            margin-top: 6.4rem;
+            @include flex-container(row, start, stretch, 1.6rem);
+        }
+        @include responsive('lg') {
+            gap: 2.1rem;
         }
     }
 
     &__card {
         @include transition(box-shadow, 200ms, ease);
         @include responsive('md') {
-            padding: 6.4rem 6.4rem 3.5rem;
+            padding: 6.4rem 0 3.5rem;
+            justify-items: end;
+            gap: 6.4rem;
         }
 
         @include responsive('lg') {
@@ -63,12 +68,13 @@
         }
     }
 
-    &__card-heading {
+    &__card-desc {
+        @include flex-container(column, center, center, 3.2rem);
         @include responsive('md') {
-            margin-top: 3.2rem;
+            padding: 0 6.5rem;
         }
         @include responsive('lg') {
-            margin-top: 3rem;
+            padding: 0;
         }
     }
 

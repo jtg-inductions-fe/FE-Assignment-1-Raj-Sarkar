@@ -1,12 +1,6 @@
 @use '../abstracts/variable' as *;
 @use '../abstracts/mixins' as *;
 
-html,
-body {
-    font-family: circular-std;
-    overflow-x: hidden;
-}
-
 .heading {
     text-align: center;
     &--xl {

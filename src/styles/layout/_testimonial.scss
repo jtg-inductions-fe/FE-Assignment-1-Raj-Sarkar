@@ -9,51 +9,69 @@
     position: relative;
 
     @include responsive('md') {
-        margin: 0;
-        padding: 6.4rem 15.6rem;
-        background-image: url('/assets/img/testimonial_background.png');
-        background-position: 50% 57%;
+        margin-top: 12.8rem;
+        padding: 0 15.6rem;
+        gap: 5.6rem;
     }
 
     @include responsive('lg') {
-        padding: 7.2rem 12.79rem;
-        background-position: 50% 40%;
+        padding: 0;
+        margin-top: 17rem;
     }
 
     &__heading-container {
         @include flex-container(column, center, center, 1.6rem);
     }
 
-    &__heading {
-        @include responsive('lg') {
-            margin-left: 1.4rem;
-        }
-
-        &--h2 {
-            margin-top: 0;
-            @include responsive('lg') {
-                margin-left: 1.5rem;
+    &__img {
+        width: 12.8rem;
+        &--background {
+            display: none;
+            position: absolute;
+            width: 250rem;
+            height: 98rem;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @include responsive('md') {
+                display: block;
             }
         }
     }
 
-    &__img {
-        width: 12.8rem;
+    &__background {
+        display: none;
+        position: absolute;
+        width: 250rem;
+        height: 98rem;
+        top: -35rem;
+        left: -30rem;
+        z-index: -1;
+        background: url('/assets/img/testimonial_background.png');
+        @include responsive('md') {
+            display: block;
+        }
+        @include responsive('lg') {
+            top: -28rem;
+            left: -13rem;
+        }
     }
 
     .glide {
         display: flex;
         flex-direction: column;
         gap: 4.8rem;
+        @include responsive('md') {
+            gap: 5.6rem;
+        }
         &__slide {
             @include flex-container(column, center, center, 6.4rem);
             @include responsive('md') {
-                padding: 5.6rem 0;
                 gap: 5.6rem;
             }
 
             @include responsive('lg') {
-                padding: 5.6rem 15rem 5.6rem 16.2rem;
+                padding: 0 19rem;
             }
 
             .text {
@@ -61,12 +79,6 @@
                 -webkit-line-clamp: 4;
                 @include responsive('md') {
                     font-size: 2.3rem;
-                    padding: 0 5rem;
-                }
-
-                @include responsive('lg') {
-                    padding: 0 2rem;
-                    margin-top: 0.2rem;
                 }
             }
         }
@@ -96,6 +108,9 @@
         &__bullet-container {
             @include flex-container(row, center, center, 2.4rem);
             margin-top: 1.6rem;
+            @include responsive('md') {
+                margin: 0;
+            }
         }
 
         &__bullet {
@@ -128,17 +143,17 @@
                 width: 10rem;
                 height: 10rem;
                 position: absolute;
-                bottom: 33.5rem;
+                bottom: 34rem;
             }
 
             @include responsive('lg') {
-                bottom: 32rem;
+                bottom: 33rem;
             }
 
             &--left {
                 background-color: $white;
                 @include responsive('md') {
-                    right: 99%;
+                    right: 110%;
                 }
 
                 @include responsive('lg') {
@@ -148,11 +163,11 @@
 
             &--right {
                 @include responsive('md') {
-                    left: 99%;
+                    left: 110%;
                 }
 
                 @include responsive('lg') {
-                    left: 92.5%;
+                    left: 90.5%;
                 }
             }
 

@@ -4,18 +4,20 @@
 .key-feature {
     @include flex-container(column, center, center, 10.9rem);
     margin-top: 9.3rem;
+    position: relative;
     @include responsive('md') {
-        padding: 0 6.4rem 6.4rem;
+        margin-top: 12.8rem;
         gap: 7rem;
     }
 
     @include responsive('lg') {
-        @include flex-container(row-reverse, center, start, 7rem);
-        padding: 5.8rem 0 0 14.2rem;
+        @include flex-container(row-reverse, center, start, 0);
+        padding-left: 1.15rem;
     }
     &__img-container {
         @include responsive('md') {
-            margin: 6.4rem 11.5rem 0rem 9.5rem;
+            @include flex-container;
+            width: 100%;
         }
 
         @include responsive('lg') {
@@ -31,6 +33,10 @@
 
         @include responsive('lg') {
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            right: -10rem;
+            z-index: -1;
         }
     }
 
@@ -38,7 +44,7 @@
         @include flex-container(column, center, center, 3.2rem);
         padding: 0 3.2rem 0;
         @include responsive('md') {
-            padding: 0 3.2rem 0;
+            gap: 6.4rem;
         }
 
         @include responsive('lg') {
@@ -52,6 +58,9 @@
         .text--sm {
             -webkit-line-clamp: 4;
             margin-top: 1.6rem;
+        }
+        @include responsive('lg') {
+            align-items: start;
         }
     }
 
@@ -93,7 +102,7 @@
     &__card-container {
         @include flex-container(column, center, center, 0.8rem);
         @include responsive('md') {
-            margin-top: 6.4rem;
+            width: 100%;
             gap: 0;
         }
     }
@@ -120,9 +129,6 @@
         text-align: start;
         &--h4 {
             font-size: 2.3rem;
-            @include responsive('md') {
-                margin: 0 0 0.8rem;
-            }
         }
     }
 }
