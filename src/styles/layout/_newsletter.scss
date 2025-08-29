@@ -2,45 +2,39 @@
 @use '../abstracts/mixins' as *;
 
 .newsletter {
-    margin-top: 6.9rem;
-    padding: 0 4.8rem;
+    @include flex-container(column, start, start, 6.4rem);
+    margin-top: 7rem;
+    padding: 0 3.2rem;
     position: relative;
 
     @include responsive('md') {
         background-color: rgba($yellow, 0.08);
         padding: 13.1rem 6.4rem 12.8rem;
-        margin: 0 6rem 0 6.7rem;
+        margin-top: 11.5rem;
         border-radius: $radius-xl;
     }
 
     @include responsive('lg') {
-        margin: 6rem 12.79rem 0;
-        padding: 12.4rem 5.8rem 12.1rem 7rem;
+        margin-top: 17.6rem;
+        padding: 12.8rem 8rem 12.1rem;
+    }
+
+    &__heading-container {
+        @include flex-container(column, center, center, 3.2rem);
     }
 
     &__heading {
-        margin-top: 3.2rem;
-        @include responsive('md') {
-            margin-top: 3.4rem;
-        }
-
         @include responsive('lg') {
             font-size: 5.5rem;
-        }
-    }
-    .heading--sm {
-        @include responsive('lg') {
-            margin-left: 0.8rem;
         }
     }
 
     &__desc {
         @include flex-container(column, center, start, 3.2rem);
-        margin-top: 6.4rem;
+        width: 100%;
         @include responsive('md') {
             flex-direction: row;
             align-items: stretch;
-            margin-top: 6.2rem;
         }
     }
 
@@ -50,6 +44,7 @@
         color: rgba($black, 0.75);
         background-color: $white;
         border-radius: $radius-xl;
+        width: 100%;
         @include responsive('md') {
             flex-grow: 1;
         }
@@ -100,8 +95,8 @@
         }
 
         @include responsive('lg') {
-            right: 104rem;
-            bottom: 47rem;
+            right: 106.5rem;
+            bottom: 47.5rem;
             opacity: 0.2;
         }
 

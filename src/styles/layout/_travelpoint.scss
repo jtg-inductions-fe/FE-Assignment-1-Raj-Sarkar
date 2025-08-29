@@ -3,28 +3,44 @@
 
 .travel {
     @include flex-container(column, center, center, 3.7rem);
-    padding: 0 1.6rem;
+    padding: 0;
+    margin-top: 6.5rem;
     @include responsive('md') {
-        padding: 0 6.4rem 0;
-        gap: 6.4rem;
+        padding: 0;
+        margin-top: 13rem;
+        gap: 6rem;
     }
 
     @include responsive('lg') {
         flex-direction: row;
-        padding: 0 11.5rem 0 0;
-        gap: 0;
-        min-height: 81.6rem;
+        margin-top: 12.8rem;
+        min-height: 69rem;
+        padding: 0;
+        gap: 1rem;
+        align-items: stretch;
     }
 
     &__desc {
+        @include flex-container(column, center, center, 3.2rem);
         position: relative;
         @include responsive('md') {
-            padding: 0.5rem 3.2rem 6.4rem;
+            gap: 6.4rem;
         }
 
         @include responsive('lg') {
-            padding: 1rem 0 0;
             max-width: 45rem;
+            justify-content: end;
+        }
+    }
+
+    &__heading-container {
+        @include flex-container(column, center, center, 1.6rem);
+
+        .text {
+            margin-top: 1.6rem;
+        }
+        @include responsive('lg') {
+            align-items: start;
         }
     }
 
@@ -32,31 +48,33 @@
         @include responsive('lg') {
             text-align: start;
         }
-
-        &--h3 {
-            margin-top: 1.6rem;
-        }
     }
 
     &__img-container {
         @include responsive('md') {
-            padding: 6.4rem 0rem 0rem 2.5rem;
-            margin-left: 0.7rem;
+            @include flex-container(row, center, center);
+            width: 100%;
         }
 
         @include responsive('lg') {
             padding: 0;
-            margin: 0 0 1.5rem;
         }
     }
 
     &__img {
         object-fit: contain;
 
+        &--main {
+            @include responsive('lg') {
+                position: absolute;
+                left: 0;
+            }
+        }
+
         &--abs {
             position: absolute;
-            top: 34%;
-            left: 31rem;
+            bottom: 46%;
+            left: 83%;
             display: none;
             @include responsive('lg') {
                 display: block;
@@ -65,19 +83,25 @@
     }
 
     &__card-container {
-        margin-top: 3.2rem;
+        width: 100%;
         display: grid;
         gap: 1.6rem;
         @include responsive('md') {
             grid-template-columns: repeat(2, auto);
-            margin-top: 6.4rem;
             gap: 3.2rem;
+            justify-content: center;
         }
     }
 
     &__card {
         gap: 1.6rem;
         max-height: 15.1rem;
+        @include responsive('md') {
+            width: 40rem;
+        }
+        @include responsive('lg') {
+            width: auto;
+        }
     }
 
     &__card-heading {

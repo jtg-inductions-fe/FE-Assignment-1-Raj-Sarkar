@@ -3,23 +3,26 @@
 
 .partner {
     @include flex-container(column, center, center, 3.2rem);
-    margin: 0.3rem 0 6.4rem;
+    margin-top: 4.5rem;
 
     @include responsive('md') {
-        margin-top: 9.6rem;
+        margin-top: 11.5rem;
     }
 
     @include responsive('lg') {
-        margin: 5.5rem 0 6.2rem 2rem;
+        margin-top: 10rem;
         flex-direction: row;
+        justify-content: start;
         gap: 10rem;
     }
 
-    &__div-container {
+    &__container {
         @include flex-container(row, center, center, 2.7rem, wrap);
 
         @include responsive('lg') {
             gap: 10rem;
+            flex-wrap: nowrap;
+            justify-content: space-between;
         }
     }
 
