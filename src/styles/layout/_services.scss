@@ -6,7 +6,7 @@
     margin-top: 6.4rem;
     padding: 0;
     @include responsive('md') {
-        margin-top: 12rem;
+        margin-top: 12.5rem;
         gap: 6.4rem;
     }
 
@@ -42,7 +42,7 @@
         @include transition(box-shadow, 200ms, ease);
         @include responsive('md') {
             padding: 6.4rem 0 3.5rem;
-            justify-items: end;
+            justify-content: end;
             gap: 6.4rem;
         }
 

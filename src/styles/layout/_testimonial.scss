@@ -25,18 +25,6 @@
 
     &__img {
         width: 12.8rem;
-        &--background {
-            display: none;
-            position: absolute;
-            width: 250rem;
-            height: 98rem;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            @include responsive('md') {
-                display: block;
-            }
-        }
     }
 
     &__background {
@@ -53,7 +41,7 @@
         }
         @include responsive('lg') {
             top: -28rem;
-            left: -13rem;
+            left: -12.8rem;
         }
     }
 
@@ -62,7 +50,7 @@
         flex-direction: column;
         gap: 4.8rem;
         @include responsive('md') {
-            gap: 5.6rem;
+            gap: 2.8rem;
         }
         &__slide {
             @include flex-container(column, center, center, 6.4rem);
@@ -143,11 +131,11 @@
                 width: 10rem;
                 height: 10rem;
                 position: absolute;
-                bottom: 34rem;
+                bottom: 28.5rem;
             }
 
             @include responsive('lg') {
-                bottom: 33rem;
+                bottom: 27rem;
             }
 
             &--left {

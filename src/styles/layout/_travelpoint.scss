@@ -7,7 +7,7 @@
     margin-top: 6.5rem;
     @include responsive('md') {
         padding: 0;
-        margin-top: 13.5rem;
+        margin-top: 13rem;
         gap: 6rem;
     }
 
@@ -16,7 +16,7 @@
         margin-top: 12.8rem;
         min-height: 69rem;
         padding: 0;
-        gap: 0;
+        gap: 1rem;
         align-items: stretch;
     }
 
@@ -73,8 +73,8 @@
 
         &--abs {
             position: absolute;
-            top: 35%;
-            left: 29.5rem;
+            bottom: 46%;
+            left: 83%;
             display: none;
             @include responsive('lg') {
                 display: block;

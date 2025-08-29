@@ -11,8 +11,7 @@
     }
 
     @include responsive('lg') {
-        @include flex-container(row-reverse, center, start, 0);
-        padding-left: 1.15rem;
+        @include flex-container(row-reverse, center, start, 1rem);
     }
     &__img-container {
         @include responsive('md') {
@@ -36,7 +35,6 @@
             position: absolute;
             top: 0;
             right: -10rem;
-            z-index: -1;
         }
     }
 

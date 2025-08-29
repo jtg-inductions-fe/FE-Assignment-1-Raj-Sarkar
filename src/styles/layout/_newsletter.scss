@@ -10,12 +10,12 @@
     @include responsive('md') {
         background-color: rgba($yellow, 0.08);
         padding: 13.1rem 6.4rem 12.8rem;
-        margin-top: 5.9rem;
+        margin-top: 11.5rem;
         border-radius: $radius-xl;
     }
 
     @include responsive('lg') {
-        margin-top: 12rem;
+        margin-top: 17.6rem;
         padding: 12.8rem 8rem 12.1rem;
     }
 
@@ -95,8 +95,8 @@
         }
 
         @include responsive('lg') {
-            right: 104rem;
-            bottom: 47rem;
+            right: 106.5rem;
+            bottom: 47.5rem;
             opacity: 0.2;
         }
 

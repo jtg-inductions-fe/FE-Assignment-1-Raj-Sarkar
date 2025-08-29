@@ -110,32 +110,27 @@
     z-index: 999;
     display: none;
 
-    li {
-        padding: 1rem 0;
-        width: auto;
-        border: none;
+    .nav__item {
+        @include typography(2rem, 500, $gray200);
+        text-decoration: none;
+        white-space: nowrap;
+        @include responsive('lg') {
+            font-size: 1.4rem;
+        }
+        &:hover {
+            color: $black;
+        }
 
-        a {
-            @include typography(2rem, 500, $gray200);
-            text-decoration: none;
-            white-space: nowrap;
-            @include responsive('lg') {
-                font-size: 1.4rem;
-            }
-            &:hover {
-                color: $black;
-            }
+        &:focus {
+            border-bottom: none;
+            outline: 0.2rem solid $violet;
+        }
 
-            &:focus {
-                border-bottom: none;
-                outline: 0.2rem solid $violet;
-            }
-
-            &:active {
-                color: darken($violet, 10%);
-            }
+        &:active {
+            color: darken($violet, 10%);
         }
     }
+
     &.active {
         display: flex;
         transform: translateY(0);
@@ -174,7 +169,7 @@
         display: block;
     }
 
-    button {
+    .nav__btn {
         @include button();
         @include typography(1.4rem, 400);
         border-radius: $radius-full;
