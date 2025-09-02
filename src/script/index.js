@@ -123,7 +123,7 @@ navItemsContainer.addEventListener('keydown', (e) => {
     )
         return;
     let focusable;
-    if (window.innerWidth >= 480)
+    if (window.innerWidth >= MOBILE_BREAKPOINT)
         focusable = document.querySelectorAll('.navbar__item');
     else focusable = document.querySelectorAll('.navbar__item, .navbar__btn');
     const first = focusable[0];
