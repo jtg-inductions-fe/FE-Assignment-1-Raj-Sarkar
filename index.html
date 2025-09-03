@@ -15,9 +15,13 @@
     <body>
         <div class="main-container">
             <!-- Header Section -->
-            <section class="header_container">
-                <a class="logo_container" href="#hero">
-                    <img class="logo" src="/assets/img/logo.png" alt="Logo" />
+            <section class="header">
+                <a class="header__logo-container" href="#hero">
+                    <img
+                        class="header__logo"
+                        src="/assets/img/logo.png"
+                        alt="Logo"
+                    />
                 </a>
                 <nav class="navbar">
                     <i
@@ -27,30 +31,34 @@
                         aria-label="Toggle navigation menu"
                         tabindex="0"
                     ></i>
-                    <ul class="nav_item_container">
+                    <ul class="navbar__item-container">
                         <li
                             id="cross-btn"
-                            class="cross nav__item"
+                            class="cross navbar__item"
                             type="button"
                             tabindex="0"
                         >
                             x
                         </li>
-                        <li><a href="#hero" class="nav__item">Home</a></li>
+                        <li><a href="#hero" class="navbar__item">Home</a></li>
                         <li>
-                            <a href="#services" class="nav__item">Discover</a>
+                            <a href="#services" class="navbar__item"
+                                >Discover</a
+                            >
                         </li>
                         <li>
-                            <a href="#key-feature" class="nav__item"
+                            <a href="#key-feature" class="navbar__item"
                                 >Special Deals</a
                             >
                         </li>
-                        <li><a href="#footer" class="nav__item">Contact</a></li>
+                        <li>
+                            <a href="#footer" class="navbar__item">Contact</a>
+                        </li>
                     </ul>
                 </nav>
-                <div class="login_signup_container">
-                    <button class="nav__btn">Log In</button>
-                    <button class="signup nav__btn">Sign Up</button>
+                <div class="navbar__btn-container">
+                    <button class="navbar__btn">Log In</button>
+                    <button class="signup navbar__btn">Sign Up</button>
                 </div>
             </section>
 

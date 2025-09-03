@@ -2,15 +2,14 @@ import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT } from './constants.js';
 import Glide from '@glidejs/glide';
 
 const hamburgerIcon = document.getElementById('hamburger');
-const navItemsContainer =
-    document.getElementsByClassName('nav_item_container')[0];
+const navItemsContainer = document.getElementsByClassName(
+    'navbar__item-container',
+)[0];
 const form = document.querySelector('form');
 const footerIcons = document.querySelectorAll('.list__icon');
 const crossBtn = document.getElementsByClassName('cross')[0];
-const header = document.getElementsByClassName('header_container')[0];
-const loginSignup = document.getElementsByClassName(
-    'login_signup_container',
-)[0];
+const header = document.getElementsByClassName('header')[0];
+const loginSignup = document.getElementsByClassName('navbar__btn-container')[0];
 const watchBtn = document.getElementById('watch');
 const slides = [
     {
@@ -125,8 +124,8 @@ navItemsContainer.addEventListener('keydown', (e) => {
         return;
     let focusable;
     if (window.innerWidth >= 480)
-        focusable = document.querySelectorAll('.nav__item');
-    else focusable = document.querySelectorAll('.nav__item, .nav__btn');
+        focusable = document.querySelectorAll('.navbar__item');
+    else focusable = document.querySelectorAll('.navbar__item, .navbar__btn');
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
     if (e.key === 'Tab') {
