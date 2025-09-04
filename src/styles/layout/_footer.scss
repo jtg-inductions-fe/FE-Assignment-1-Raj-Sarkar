@@ -37,6 +37,7 @@
 
         &--p {
             @include typography(1.6rem, 400, $gray100, 160%);
+            -webkit-line-clamp: 4;
             @include responsive('md') {
                 font-size: 2.25rem;
             }

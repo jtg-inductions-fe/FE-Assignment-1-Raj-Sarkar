@@ -37,6 +37,7 @@
         @include flex-container(column, center, center, 1.6rem);
 
         .text {
+            -webkit-line-clamp: 4;
             margin-top: 1.6rem;
         }
         @include responsive('lg') {

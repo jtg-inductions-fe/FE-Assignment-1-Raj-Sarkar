@@ -78,7 +78,7 @@
 }
 
 .btn {
-    @include button($white, $black, 39.8rem, 6.5rem);
+    @include button($white, $black, 100%, 6.5rem);
     @include typography(1.4rem, 400);
 
     &:hover {
@@ -124,7 +124,7 @@
 }
 
 .ellipse {
-    width: 60rem;
+    width: 50rem;
     height: 50rem;
     opacity: 0.5;
     pointer-events: none;
@@ -134,19 +134,19 @@
 
     &--primary {
         filter: blur(2rem);
-        top: -120rem;
+        top: -20rem;
         left: -25rem;
 
         @include responsive('md') {
             width: 70rem;
             height: 60rem;
-            top: -155rem;
+            top: -20rem;
             left: -20rem;
         }
 
         @include responsive('lg') {
             width: 80rem;
-            top: -110rem;
+            top: -20rem;
             left: -20rem;
         }
     }

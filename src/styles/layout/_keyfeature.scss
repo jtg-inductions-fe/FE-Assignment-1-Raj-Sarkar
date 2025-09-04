@@ -54,7 +54,7 @@
     &__heading-container {
         @include flex-container(column, center, center, 1.6rem);
         .text--sm {
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 6;
             margin-top: 1.6rem;
         }
         @include responsive('lg') {
