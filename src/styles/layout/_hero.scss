@@ -103,6 +103,7 @@
         text-align: center;
 
         &--h1 {
+            -webkit-line-clamp: 6;
             padding: 0rem 2rem;
 
             @include responsive('md') {

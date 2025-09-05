@@ -24,6 +24,7 @@
     }
 
     &__heading {
+        -webkit-line-clamp: 6;
         @include responsive('lg') {
             font-size: 5.5rem;
         }
